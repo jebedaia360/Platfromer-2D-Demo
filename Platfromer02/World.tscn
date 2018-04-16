@@ -953,6 +953,8 @@ height = 71.5709
 
 [node name="World" type="Node2D" index="0"]
 
+_sections_unfolded = [ "Material" ]
+
 [node name="Player" type="RigidBody2D" parent="." index="0"]
 
 position = Vector2( 114.558, 327.093 )
@@ -1010,33 +1012,37 @@ _sections_unfolded = [ "Playback Options" ]
 
 [node name="BodyParts" type="Node2D" parent="Player" index="3"]
 
+editor/display_folded = true
+
 [node name="shoe" type="Sprite" parent="Player/BodyParts" index="0"]
 
-position = Vector2( 1.45656, 42.6955 )
+position = Vector2( -30.0413, 45.482 )
+rotation = 1.8389
 scale = Vector2( 0.297948, 0.30322 )
 z_index = 1
 texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
 [node name="shoe2" type="Sprite" parent="Player/BodyParts" index="1"]
 
-position = Vector2( 9.3476, 42.9875 )
+position = Vector2( 16.4931, 46.4069 )
+rotation = -0.228404
 scale = Vector2( 0.297948, 0.30322 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="back_hand" type="Sprite" parent="Player/BodyParts" index="2"]
 
-position = Vector2( 18.2447, 17.3498 )
-rotation = -0.196515
+position = Vector2( -28.1204, 19.714 )
+rotation = 1.71339
 scale = Vector2( 0.208917, 0.210816 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="front_hand" type="Sprite" parent="Player/BodyParts" index="3"]
 
-position = Vector2( -21.6737, 19.2873 )
-rotation = 0.381639
+position = Vector2( 22.5432, 32.0519 )
+rotation = -1.51455
 scale = Vector2( 0.208917, 0.210816 )
 z_index = 3
 texture = ExtResource( 6 )
@@ -1044,16 +1050,17 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="body" type="Sprite" parent="Player/BodyParts" index="4"]
 
-position = Vector2( 1.26148, 18.1987 )
-rotation = 0.0180996
+editor/display_folded = true
+position = Vector2( -2.01783, 21.6549 )
+rotation = 0.293187
 scale = Vector2( 0.177557, 0.20095 )
 texture = ExtResource( 7 )
 
 [node name="scarf_pice" type="Sprite" parent="Player/BodyParts/body" index="0"]
 
 show_behind_parent = true
-position = Vector2( -61.5808, -62.7231 )
-rotation = -0.236124
+position = Vector2( -58.767, -68.6927 )
+rotation = 0.409692
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 8 )
 offset = Vector2( -12.7377, 4.61761 )
@@ -1061,16 +1068,17 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="head" type="Sprite" parent="Player/BodyParts" index="5"]
 
-position = Vector2( -2.88398, -19.3272 )
-rotation = -0.0907541
+editor/display_folded = true
+position = Vector2( 0.98443, -25.9158 )
+rotation = 0.153399
 scale = Vector2( 0.163378, 0.160865 )
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="hair_pice" type="Sprite" parent="Player/BodyParts/head" index="0"]
 
-position = Vector2( -12.2079, -53.9632 )
-rotation = -0.195219
+position = Vector2( -13.0572, -51.7393 )
+rotation = -0.345312
 scale = Vector2( 1.47848, 1.50007 )
 z_index = 2
 texture = ExtResource( 10 )
@@ -1079,8 +1087,8 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="hair_pice2" type="Sprite" parent="Player/BodyParts/head" index="1"]
 
-position = Vector2( 37.3483, -57.748 )
-rotation = -0.377319
+position = Vector2( 33.2297, -62.3312 )
+rotation = -0.252677
 scale = Vector2( 1.47826, 1.50028 )
 z_index = 1
 texture = ExtResource( 10 )
@@ -1089,8 +1097,8 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="hair_pice3" type="Sprite" parent="Player/BodyParts/head" index="2"]
 
-position = Vector2( 68.1776, -57.3967 )
-rotation = -0.327835
+position = Vector2( 64.3634, -60.4222 )
+rotation = -0.254193
 scale = Vector2( 1.47891, 1.49965 )
 texture = ExtResource( 10 )
 offset = Vector2( 22.6552, 7.98126 )
@@ -1098,8 +1106,8 @@ offset = Vector2( 22.6552, 7.98126 )
 [node name="bandana_pice" type="Sprite" parent="Player/BodyParts/head" index="3"]
 
 show_behind_parent = true
-position = Vector2( -86.6743, 11.0964 )
-rotation = -0.358751
+position = Vector2( -88.6451, -0.810669 )
+rotation = 0.213051
 scale = Vector2( 1.48648, 1.49214 )
 texture = ExtResource( 11 )
 offset = Vector2( -12.1903, 11.1094 )
@@ -1107,7 +1115,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="RayCast2D" type="RayCast2D" parent="Player" index="4"]
 
-position = Vector2( -0.709801, 25.7599 )
+position = Vector2( -5.99131, 25.7599 )
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 35 )
@@ -1115,14 +1123,13 @@ collision_mask = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" index="5"]
 
-position = Vector2( 0.161217, 6.05542 )
-rotation = 0.0240661
+position = Vector2( -1.033, 6.05542 )
+rotation = 0.194098
 shape = SubResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
 
-editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -1145,6 +1152,7 @@ texture_scale = Vector2( 1, 1 )
 texture_rotation_degrees = 0.0
 invert_enable = false
 invert_border = 100.0
+_sections_unfolded = [ "Material", "Texture" ]
 
 [node name="Polygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" index="1"]
 
