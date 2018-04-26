@@ -1,12 +1,13 @@
 extends RigidBody2D
 
 var max_speed = 300
-var speed = 600 
+var acc = 600 
 var jump_high = 400
-
 var curr_speed = 0 
-
 onready var ray = $RayCast2D
+
+func _ready():
+	$AnimationTreePlayer.active = true
 
 func _process(delta):
 	if curr_speed > 0:
@@ -15,23 +16,22 @@ func _process(delta):
 		$BodyParts.scale.x = -1
 	
 	if ray.is_colliding():
-		if linear_velocity.x != 0:
-			if $AnimationPlayer.current_animation != "run":
-				$AnimationPlayer.play("run")
-				
-		else:
-			if $AnimationPlayer.current_animation != "idle":
-				$AnimationPlayer.play("idle")
-	
-	if Input.is_action_pressed("ui_up"):
-		if $AnimationPlayer.current_animation != "jump":
-			$AnimationPlayer.play("jump")
+		$AnimationTreePlayer.blend2_node_set_amount(
+			"idle-run",
+			abs(curr_speed / max_speed)
+		)
 		
+		if Input.is_action_just_pressed("ui_up"):
+			$AnimationTreePlayer.oneshot_node_start("jump")
+		
+	else:
+		$AnimationTreePlayer.oneshot_node_start("fall")
+
 
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"):
 		if curr_speed < max_speed:
-			curr_speed += delta * speed
+			curr_speed += delta * acc
 
 		set_axis_velocity(
 			Vector2(curr_speed, 0)
@@ -39,7 +39,7 @@ func _physics_process(delta):
 	
 	elif Input.is_action_pressed("ui_left"):
 		if curr_speed > -max_speed:
-			curr_speed -= delta * speed
+			curr_speed -= delta * acc
 
 		set_axis_velocity(
 			Vector2(curr_speed, 0)
@@ -48,10 +48,10 @@ func _physics_process(delta):
 	else:
 		if curr_speed != 0:
 			if curr_speed > 0:
-				curr_speed -= delta * speed
+				curr_speed -= delta * acc
 			
 			elif curr_speed < 0:
-				curr_speed += delta * speed
+				curr_speed += delta * acc
 
 			set_axis_velocity(
 				Vector2(curr_speed, 0)
