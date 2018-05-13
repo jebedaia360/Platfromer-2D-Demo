@@ -15,7 +15,7 @@ points = PoolVector2Array( 64, 32, 64, 64, 0, 64, 0, 32 )
 [sub_resource type="ConvexPolygonShape2D" id=11]
 
 custom_solver_bias = 0.0
-points = PoolVector2Array( 64, 0, 64, 24, 0, 24, 0, 0 )
+points = PoolVector2Array( 0, 0, 64, 0, 64, 24, 0, 24 )
 
 [sub_resource type="ConvexPolygonShape2D" id=10]
 
@@ -152,4 +152,49 @@ points = PoolVector2Array( 64, 32, 64, 64, 0, 64, 0, 32 )
 "shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
+12/name = "12"
+12/texture = ExtResource( 1 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 960, 64, 64, 64 )
+12/is_autotile = false
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shapes = [  ]
+13/name = "13"
+13/texture = ExtResource( 1 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 960, 192, 64, 64 )
+13/is_autotile = false
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shapes = [  ]
+14/name = "14"
+14/texture = ExtResource( 1 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 832, 448, 64, 64 )
+14/is_autotile = false
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shapes = [  ]
+15/name = "15"
+15/texture = ExtResource( 1 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 896, 448, 64, 64 )
+15/is_autotile = false
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shapes = [  ]
+16/name = "16"
+16/texture = ExtResource( 1 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 704, 256, 64, 64 )
+16/is_autotile = false
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shapes = [  ]
 
