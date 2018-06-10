@@ -5,6 +5,8 @@ export var acc = 600
 export var jump_high = 400
 var curr_speed = 0
 onready var ray = $RayCast2D
+var collected_eleveneks = 0
+var eleveneks_to_collect = 0
 
 func _ready():
 	$AnimationTreePlayer.active = true
@@ -62,3 +64,8 @@ func _physics_process(delta):
 				Vector2(0, -jump_high)
 			)
 
+func collect_elevenk():
+	collected_eleveneks += 1
+
+func add_elevenk_to_collect():
+	 eleveneks_to_collect += 1
