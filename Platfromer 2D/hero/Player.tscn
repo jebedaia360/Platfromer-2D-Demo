@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://hero/Player.gd" type="Script" id=1]
 [ext_resource path="res://hero/shoe.png" type="Texture" id=2]
 [ext_resource path="res://hero/back_hand.png" type="Texture" id=3]
 [ext_resource path="res://hero/front_hand.png" type="Texture" id=4]
@@ -9,6 +9,7 @@
 [ext_resource path="res://hero/head.png" type="Texture" id=7]
 [ext_resource path="res://hero/hair_pice.png" type="Texture" id=8]
 [ext_resource path="res://hero/bandana_pice.png" type="Texture" id=9]
+
 
 [sub_resource type="Animation" id=1]
 
@@ -999,7 +1000,7 @@ tracks/10/path = NodePath("BodyParts:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
-tracks/10/enabled = true
+tracks/10/enabled = false
 tracks/10/keys = {
 "times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
@@ -1492,9 +1493,15 @@ base_path = NodePath("..")
 active = false
 data = {
 "active": false,
-"connections": [ "land", "out", 0, "anim-idle", "idle-run", 0, "anim-run", "idle-run", 1, "anim-jump", "air", 0, "idle-run", "air", 1, "anim", "air", 2, "air", "land", 0, "anim-land", "land", 1 ],
+"connections": [ "anim-idle", "idle-run", 0, "anim-run", "idle-run", 1, "land", "out", 0, "anim-jump", "air", 0, "idle-run", "air", 1, "anim", "air", 2, "air", "land", 0, "anim-land", "land", 1 ],
 "master": NodePath("../AnimationPlayer"),
 "nodes": [ {
+"blend": 0.0,
+"filter": [  ],
+"id": "idle-run",
+"position": Vector2( 227, 87 ),
+"type": "blend2"
+}, {
 "filter": [  ],
 "from": "fall",
 "id": "anim",
@@ -1511,11 +1518,16 @@ data = {
 "position": Vector2( 548, 225 ),
 "type": "animation"
 }, {
-"blend": 0.0,
 "filter": [  ],
-"id": "idle-run",
-"position": Vector2( 227, 87 ),
-"type": "blend2"
+"from": "idle",
+"id": "anim-idle",
+"position": Vector2( 50, 50 ),
+"type": "animation"
+}, {
+"blend": 0.0,
+"id": "air",
+"position": Vector2( 560, 63 ),
+"type": "blend3"
 }, {
 "filter": [  ],
 "from": "jump",
@@ -1528,17 +1540,6 @@ data = {
 "id": "anim-run",
 "position": Vector2( 47, 164 ),
 "type": "animation"
-}, {
-"filter": [  ],
-"from": "idle",
-"id": "anim-idle",
-"position": Vector2( 50, 50 ),
-"type": "animation"
-}, {
-"blend": 0.0,
-"id": "air",
-"position": Vector2( 560, 63 ),
-"type": "blend3"
 }, {
 "autorestart": true,
 "autorestart_delay": 1.0,
@@ -1562,7 +1563,8 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="shoe" type="Sprite" parent="BodyParts" index="0"]
 
-position = Vector2( 1.45656, 42.6955 )
+position = Vector2( -0.306173, 49.9869 )
+rotation = 0.115302
 scale = Vector2( 0.3, 0.3 )
 z_index = 1
 texture = ExtResource( 2 )
@@ -1570,23 +1572,22 @@ _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform",
 
 [node name="shoe2" type="Sprite" parent="BodyParts" index="1"]
 
-position = Vector2( 9.3476, 42.9875 )
+position = Vector2( 6.22544, 48.2127 )
+rotation = 0.181465
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="back_hand" type="Sprite" parent="BodyParts" index="2"]
 
-position = Vector2( 20.5137, 14.7225 )
-rotation = -0.290894
+position = Vector2( 6.94208, 26.9691 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="front_hand" type="Sprite" parent="BodyParts" index="3"]
 
-position = Vector2( -26.2117, 18.0931 )
-rotation = 0.381639
+position = Vector2( -5.50215, 30.2678 )
 scale = Vector2( 0.2, 0.2 )
 z_index = 3
 texture = ExtResource( 4 )
@@ -1594,15 +1595,14 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="body" type="Sprite" parent="BodyParts" index="4"]
 
-position = Vector2( 1.46277, 18.1987 )
-rotation = -0.0736545
+position = Vector2( -1.20396, 19.461 )
 scale = Vector2( 0.248696, 0.247721 )
 texture = ExtResource( 5 )
 
 [node name="hood" type="Sprite" parent="BodyParts/body" index="0"]
 
 show_behind_parent = true
-position = Vector2( 1.89464, -41.8669 )
+position = Vector2( 1.38364, -36.1053 )
 rotation = -0.236124
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 6 )
@@ -1611,16 +1611,15 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="head" type="Sprite" parent="BodyParts" index="5"]
 
-position = Vector2( -6.07082, -20.1444 )
-rotation = -0.110016
+position = Vector2( -4.74062, -18.2527 )
 scale = Vector2( 0.223049, 0.240703 )
 texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="hair_pice" type="Sprite" parent="BodyParts/head" index="0"]
 
-position = Vector2( -19.7543, -27.0383 )
-rotation = -0.245521
+position = Vector2( -35.9095, -32.7112 )
+rotation = 0.152635
 z_index = 2
 texture = ExtResource( 8 )
 offset = Vector2( 26.3256, 3.21399 )
@@ -1628,8 +1627,8 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="hair_pice2" type="Sprite" parent="BodyParts/head" index="1"]
 
-position = Vector2( 15.9109, -28.9753 )
-rotation = -0.455435
+position = Vector2( 4.15466, -41.1095 )
+rotation = 0.162882
 z_index = 1
 texture = ExtResource( 8 )
 offset = Vector2( 20.0538, 7.67585 )
@@ -1637,16 +1636,16 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="hair_pice3" type="Sprite" parent="BodyParts/head" index="2"]
 
-position = Vector2( 41.4311, -28.0647 )
-rotation = -0.402696
+position = Vector2( 35.4899, -33.8207 )
+rotation = -0.19777
 texture = ExtResource( 8 )
 offset = Vector2( 22.6552, 7.98126 )
 
 [node name="bandana_pice" type="Sprite" parent="BodyParts/head" index="3"]
 
 show_behind_parent = true
-position = Vector2( -70.8927, 5.07153 )
-rotation = -0.407451
+position = Vector2( -70.137, -0.0490723 )
+rotation = -0.0219725
 texture = ExtResource( 9 )
 offset = Vector2( -12.1903, 11.1094 )
 _sections_unfolded = [ "Transform", "Visibility" ]

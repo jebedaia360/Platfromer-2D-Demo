@@ -10,9 +10,13 @@ config_version=3
 
 [application]
 
-config/name="Platformer 2D 05"
-run/main_scene="res://World.tscn"
+config/name="Platformer 2D 06"
+run/main_scene="res://GameUI.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+globals="*res://globals.gd"
 
 [rendering]
 
