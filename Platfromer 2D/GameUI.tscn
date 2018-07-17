@@ -36,7 +36,6 @@ _sections_unfolded = [ "Hint", "Mouse", "Size Flags" ]
 
 [node name="LevelViewport" type="ViewportContainer" parent="." index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -87,10 +86,10 @@ anchor_left = 1.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 0.0
-margin_left = -95.0
-margin_top = 33.0
-margin_right = -35.0
-margin_bottom = 61.0
+margin_left = -109.0
+margin_top = 32.0
+margin_right = -49.0
+margin_bottom = 60.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -114,5 +113,12 @@ position = Vector2( 76.7281, 12.44 )
 z_index = 10
 z_as_relative = false
 _sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="Timer" type="Timer" parent="CollectedLabel" index="1"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = true
+autostart = true
 
 
