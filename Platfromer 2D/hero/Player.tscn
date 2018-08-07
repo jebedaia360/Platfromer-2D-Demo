@@ -10,7 +10,6 @@
 [ext_resource path="res://hero/hair_pice.png" type="Texture" id=8]
 [ext_resource path="res://hero/bandana_pice.png" type="Texture" id=9]
 
-
 [sub_resource type="Animation" id=1]
 
 resource_name = "fall"
@@ -1493,15 +1492,9 @@ base_path = NodePath("..")
 active = false
 data = {
 "active": false,
-"connections": [ "anim-idle", "idle-run", 0, "anim-run", "idle-run", 1, "land", "out", 0, "anim-jump", "air", 0, "idle-run", "air", 1, "anim", "air", 2, "air", "land", 0, "anim-land", "land", 1 ],
+"connections": [ "land", "out", 0, "air", "land", 0, "anim-land", "land", 1, "anim-idle", "idle-run", 0, "anim-run", "idle-run", 1, "anim-jump", "air", 0, "idle-run", "air", 1, "anim", "air", 2 ],
 "master": NodePath("../AnimationPlayer"),
 "nodes": [ {
-"blend": 0.0,
-"filter": [  ],
-"id": "idle-run",
-"position": Vector2( 227, 87 ),
-"type": "blend2"
-}, {
 "filter": [  ],
 "from": "fall",
 "id": "anim",
@@ -1511,6 +1504,35 @@ data = {
 "id": "out",
 "position": Vector2( 803, 76 ),
 "type": "output"
+}, {
+"autorestart": true,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 1.2,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "land",
+"mix": false,
+"position": Vector2( 687, 79 ),
+"type": "oneshot"
+}, {
+"filter": [  ],
+"from": "jump",
+"id": "anim-jump",
+"position": Vector2( 374, 37 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "run",
+"id": "anim-run",
+"position": Vector2( 47, 164 ),
+"type": "animation"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "idle-run",
+"position": Vector2( 227, 87 ),
+"type": "blend2"
 }, {
 "filter": [  ],
 "from": "land",
@@ -1528,29 +1550,6 @@ data = {
 "id": "air",
 "position": Vector2( 560, 63 ),
 "type": "blend3"
-}, {
-"filter": [  ],
-"from": "jump",
-"id": "anim-jump",
-"position": Vector2( 374, 37 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "run",
-"id": "anim-run",
-"position": Vector2( 47, 164 ),
-"type": "animation"
-}, {
-"autorestart": true,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.0,
-"fade_in": 1.2,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "land",
-"mix": false,
-"position": Vector2( 687, 79 ),
-"type": "oneshot"
 } ]
 }
 
@@ -1678,7 +1677,7 @@ limit_bottom = 10000000
 limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
-smoothing_enabled = false
+smoothing_enabled = true
 smoothing_speed = 5.0
 offset_v = 0.0
 offset_h = 0.0

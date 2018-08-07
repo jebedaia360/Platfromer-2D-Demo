@@ -5,6 +5,7 @@ export var acc = 600
 export var jump_high = 400
 var curr_speed = 0
 onready var ray = $RayCast2D
+var runing = false
 
 
 func _ready():
@@ -12,6 +13,9 @@ func _ready():
 
 func _process(delta):
 	var x = abs(clamp(linear_velocity.x, -1, 1))
+	if not runing:
+		x = 0
+	
 	$AnimationTreePlayer.blend2_node_set_amount("idle-run", x)
 		
 	var y = floor(clamp(linear_velocity.y, -100, 100))/100
@@ -32,7 +36,8 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"):
 		if curr_speed < max_speed:
 			curr_speed += delta * acc
-
+		
+		runing = true
 		set_axis_velocity(
 			Vector2(curr_speed, 0)
 		)
@@ -40,7 +45,8 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("ui_left"):
 		if curr_speed > -max_speed:
 			curr_speed -= delta * acc
-
+		
+		runing = true
 		set_axis_velocity(
 			Vector2(curr_speed, 0)
 		)
@@ -56,6 +62,8 @@ func _physics_process(delta):
 			set_axis_velocity(
 				Vector2(curr_speed, 0)
 			)
+		
+		runing = false
 	
 	if Input.is_action_pressed("ui_up"):
 		if ray.is_colliding():
