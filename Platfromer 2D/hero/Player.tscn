@@ -1465,6 +1465,7 @@ _sections_unfolded = [ "Collision", "Transform", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
+cam_speed = 150
 max_speed = 300
 acc = 600
 jump_high = 300
@@ -1516,18 +1517,6 @@ data = {
 "position": Vector2( 687, 79 ),
 "type": "oneshot"
 }, {
-"filter": [  ],
-"from": "jump",
-"id": "anim-jump",
-"position": Vector2( 374, 37 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "run",
-"id": "anim-run",
-"position": Vector2( 47, 164 ),
-"type": "animation"
-}, {
 "blend": 0.0,
 "filter": [  ],
 "id": "idle-run",
@@ -1550,6 +1539,18 @@ data = {
 "id": "air",
 "position": Vector2( 560, 63 ),
 "type": "blend3"
+}, {
+"filter": [  ],
+"from": "jump",
+"id": "anim-jump",
+"position": Vector2( 374, 37 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "run",
+"id": "anim-run",
+"position": Vector2( 47, 164 ),
+"type": "animation"
 } ]
 }
 

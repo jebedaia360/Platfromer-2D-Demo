@@ -1,5 +1,6 @@
 extends RigidBody2D
 
+export var cam_speed = 150
 export var max_speed = 300
 export var acc = 600
 export var jump_high = 400
@@ -12,6 +13,14 @@ func _ready():
 	$AnimationTreePlayer.active = true
 
 func _process(delta):
+	if Input.is_action_pressed("ui_right"):
+		if $Camera2D.offset.x < 100:
+			$Camera2D.offset.x += delta * cam_speed
+	
+	elif Input.is_action_pressed("ui_left"):
+		if $Camera2D.offset.x > -100:
+			$Camera2D.offset.x -= delta * cam_speed
+	
 	var x = abs(clamp(linear_velocity.x, -1, 1))
 	if not runing:
 		x = 0
@@ -38,20 +47,17 @@ func _physics_process(delta):
 			curr_speed += delta * acc
 		
 		runing = true
-		set_axis_velocity(
-			Vector2(curr_speed, 0)
-		)
-	
+		
 	elif Input.is_action_pressed("ui_left"):
 		if curr_speed > -max_speed:
 			curr_speed -= delta * acc
 		
 		runing = true
-		set_axis_velocity(
-			Vector2(curr_speed, 0)
-		)
+	
 	
 	else:
+		runing = false
+		
 		if curr_speed != 0:
 			if curr_speed > 0:
 				curr_speed -= delta * acc
@@ -59,11 +65,11 @@ func _physics_process(delta):
 			elif curr_speed < 0:
 				curr_speed += delta * acc
 
-			set_axis_velocity(
-				Vector2(curr_speed, 0)
-			)
+	set_axis_velocity(
+		Vector2(curr_speed, 0)
+	)
 		
-		runing = false
+		
 	
 	if Input.is_action_pressed("ui_up"):
 		if ray.is_colliding():

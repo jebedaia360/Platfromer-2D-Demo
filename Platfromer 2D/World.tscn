@@ -46,13 +46,14 @@ tracks/1/keys = {
 "values": [ Vector2( 100, 0 ), Vector2( -100, 0 ), Vector2( 100, 0 ) ]
 }
 
-[node name="World" type="Node2D" index="0"]
+[node name="World" type="Node2D"]
 
 _sections_unfolded = [ "Material" ]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
 gravity_scale = 4.0
+cam_speed = 150
 
 [node name="FrontDecrations" type="TileMap" parent="." index="1"]
 

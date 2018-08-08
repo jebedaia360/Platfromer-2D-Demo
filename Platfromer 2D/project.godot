@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Platformer 2D 06"
+config/name="Platformer 2D 09"
 run/main_scene="res://GameUI.tscn"
 config/icon="res://icon.png"
 
