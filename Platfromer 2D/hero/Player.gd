@@ -13,19 +13,14 @@ func _ready():
 	$AnimationTreePlayer.active = true
 
 func _process(delta):
-	if Input.is_action_pressed("ui_right"):
-		if $Camera2D.offset.x < 100:
-			$Camera2D.offset.x += delta * cam_speed
-	
-	elif Input.is_action_pressed("ui_left"):
-		if $Camera2D.offset.x > -100:
-			$Camera2D.offset.x -= delta * cam_speed
-	
-	var x = abs(clamp(linear_velocity.x, -1, 1))
+	var x = clamp(linear_velocity.x, -1, 1)
+	var camx = $Camera2D.offset.x
+	$Camera2D.offset.x = lerp(camx, 100*x, delta)
+	var xrun = abs(x)
 	if not runing:
-		x = 0
+		xrun = 0
 	
-	$AnimationTreePlayer.blend2_node_set_amount("idle-run", x)
+	$AnimationTreePlayer.blend2_node_set_amount("idle-run", xrun)
 		
 	var y = floor(clamp(linear_velocity.y, -100, 100))/100
 	$AnimationTreePlayer.blend3_node_set_amount("air", y)
