@@ -10,7 +10,6 @@ radius = 12.6821
 
 [node name="elevenek" type="Area2D"]
 
-position = Vector2( -128, -304 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -20,19 +19,12 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-speed = 112
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-position = Vector2( -26.0883, -27.846 )
-rotation = -0.03178
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="body" parent="." index="1" instance=ExtResource( 2 )]
-
-position = Vector2( -26.0883, -27.846 )
-rotation = -0.03178
-scale = Vector2( 0.025, 0.025 )
 
 

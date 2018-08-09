@@ -1507,6 +1507,12 @@ data = {
 "type": "output"
 }, {
 "filter": [  ],
+"from": "jump",
+"id": "anim-jump",
+"position": Vector2( 374, 37 ),
+"type": "animation"
+}, {
+"filter": [  ],
 "from": "land",
 "id": "anim-land",
 "position": Vector2( 548, 225 ),
@@ -1516,18 +1522,6 @@ data = {
 "id": "air",
 "position": Vector2( 560, 63 ),
 "type": "blend3"
-}, {
-"filter": [  ],
-"from": "jump",
-"id": "anim-jump",
-"position": Vector2( 374, 37 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "idle",
-"id": "anim-idle",
-"position": Vector2( 50, 50 ),
-"type": "animation"
 }, {
 "autorestart": true,
 "autorestart_delay": 1.0,
@@ -1539,6 +1533,12 @@ data = {
 "mix": false,
 "position": Vector2( 687, 79 ),
 "type": "oneshot"
+}, {
+"filter": [  ],
+"from": "idle",
+"id": "anim-idle",
+"position": Vector2( 50, 50 ),
+"type": "animation"
 }, {
 "filter": [  ],
 "from": "run",
@@ -1650,7 +1650,7 @@ texture = ExtResource( 9 )
 offset = Vector2( -12.1903, 11.1094 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="RayCast2D" type="RayCast2D" parent="." index="3"]
+[node name="RayCastDown" type="RayCast2D" parent="." index="3"]
 
 position = Vector2( 0.487663, 34.7409 )
 enabled = true
@@ -1658,13 +1658,31 @@ exclude_parent = true
 cast_to = Vector2( 0, 35 )
 collision_mask = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="4"]
+[node name="RayCastRight" type="RayCast2D" parent="." index="4"]
+
+position = Vector2( 0, 20 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 15, 0 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="RayCastLeft" type="RayCast2D" parent="." index="5"]
+
+position = Vector2( 0, 20 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( -20, 0 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="6"]
 
 position = Vector2( -2.65598, 15.8516 )
 shape = SubResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Camera2D" type="Camera2D" parent="." index="5"]
+[node name="Camera2D" type="Camera2D" parent="." index="7"]
 
 position = Vector2( -2.15092, -0.35849 )
 anchor_mode = 1
