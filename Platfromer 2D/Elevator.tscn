@@ -13,7 +13,7 @@ extents = Vector2( 95.3074, 32.4043 )
 custom_solver_bias = 0.0
 extents = Vector2( 95.3074, 16 )
 
-[node name="Elevator" type="StaticBody2D" index="0"]
+[node name="Elevator" type="StaticBody2D"]
 
 input_pickable = false
 collision_layer = 1

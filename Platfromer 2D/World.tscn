@@ -36,13 +36,13 @@ tracks/0/keys = {
 "values": [ 0.0, 0.0, 1.0, 1.0, 0.0 ]
 }
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Material" ]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 1760, -544 )
+position = Vector2( -192, -192 )
 gravity_scale = 4.0
 
 [node name="FrontDecrations" type="TileMap" parent="." index="1"]
@@ -51,7 +51,7 @@ position = Vector2( 64, 64 )
 z_index = 10
 mode = 0
 tile_set = ExtResource( 2 )
-cell_size = Vector2( 128, 128 )
+cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 cell_half_offset = 2
@@ -322,5 +322,7 @@ loop = false
 lookahead = 4.0
 
 [node name="Elevator" parent="ElevatorPath/PathFollow2D" index="0" instance=ExtResource( 9 )]
+
+modif = 60.0
 
 
