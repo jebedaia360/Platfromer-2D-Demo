@@ -78,4 +78,4 @@ func is_on_floor():
 func is_on_wall():
 	var r_wall = $RayCastRight.is_colliding()
 	var l_wall = $RayCastLeft.is_colliding()
-	return r_wall or l_wall 
+	return r_wall or l_wall

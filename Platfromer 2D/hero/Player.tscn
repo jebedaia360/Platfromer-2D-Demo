@@ -1439,7 +1439,7 @@ custom_solver_bias = 0.0
 radius = 10.0
 height = 45.3936
 
-[node name="Player" type="RigidBody2D" index="0"]
+[node name="Player" type="RigidBody2D"]
 
 position = Vector2( -78.84, -149.456 )
 input_pickable = false
@@ -1493,7 +1493,7 @@ base_path = NodePath("..")
 active = false
 data = {
 "active": false,
-"connections": [ "land", "out", 0, "anim-jump", "air", 0, "idle-run", "air", 1, "anim", "air", 2, "air", "land", 0, "anim-land", "land", 1, "anim-idle", "idle-run", 0, "anim-run", "idle-run", 1 ],
+"connections": [ "land", "out", 0, "anim-jump", "air", 0, "idle-run", "air", 1, "anim", "air", 2, "anim-idle", "idle-run", 0, "anim-run", "idle-run", 1, "air", "land", 0, "anim-land", "land", 1 ],
 "master": NodePath("../AnimationPlayer"),
 "nodes": [ {
 "filter": [  ],
@@ -1505,34 +1505,6 @@ data = {
 "id": "out",
 "position": Vector2( 803, 76 ),
 "type": "output"
-}, {
-"filter": [  ],
-"from": "jump",
-"id": "anim-jump",
-"position": Vector2( 374, 37 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "land",
-"id": "anim-land",
-"position": Vector2( 548, 225 ),
-"type": "animation"
-}, {
-"blend": 0.0,
-"id": "air",
-"position": Vector2( 560, 63 ),
-"type": "blend3"
-}, {
-"autorestart": true,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.0,
-"fade_in": 1.2,
-"fade_out": 0.0,
-"filter": [  ],
-"id": "land",
-"mix": false,
-"position": Vector2( 687, 79 ),
-"type": "oneshot"
 }, {
 "filter": [  ],
 "from": "idle",
@@ -1547,10 +1519,38 @@ data = {
 "type": "animation"
 }, {
 "blend": 0.0,
+"id": "air",
+"position": Vector2( 560, 63 ),
+"type": "blend3"
+}, {
+"blend": 0.0,
 "filter": [  ],
 "id": "idle-run",
 "position": Vector2( 227, 87 ),
 "type": "blend2"
+}, {
+"filter": [  ],
+"from": "jump",
+"id": "anim-jump",
+"position": Vector2( 374, 37 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "land",
+"id": "anim-land",
+"position": Vector2( 548, 225 ),
+"type": "animation"
+}, {
+"autorestart": true,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 1.2,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "land",
+"mix": false,
+"position": Vector2( 687, 79 ),
+"type": "oneshot"
 } ]
 }
 
@@ -1688,7 +1688,7 @@ position = Vector2( -2.15092, -0.35849 )
 anchor_mode = 1
 rotating = false
 current = true
-zoom = Vector2( 0.5, 0.5 )
+zoom = Vector2( 0.7, 0.7 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000

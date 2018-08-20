@@ -1,13 +1,19 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://titles/jungle_ruins/jungle_ruins_back.tres" type="TileSet" id=1]
+[ext_resource path="res://Elevator.gd" type="Script" id=1]
+[ext_resource path="res://titles/jungle_ruins/jungle_ruins_back.tres" type="TileSet" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 95.3074, 32.4043 )
 
-[node name="Elevator" type="StaticBody2D"]
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 95.3074, 16 )
+
+[node name="Elevator" type="StaticBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -16,14 +22,17 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Material", "Transform" ]
+script = ExtResource( 1 )
+_sections_unfolded = [ "Linear", "Material", "Transform" ]
+axis = "x"
+modif = -60.0
 
 [node name="Back2" type="TileMap" parent="." index="0"]
 
 position = Vector2( 32, 0 )
 z_index = -10
 mode = 0
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 2 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -50,7 +59,7 @@ modulate = Color( 0.894531, 0.842882, 0.744278, 1 )
 position = Vector2( 32, 32 )
 z_index = -11
 mode = 0
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 2 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -75,5 +84,20 @@ __meta__ = {
 
 shape = SubResource( 1 )
 one_way_collision = true
+
+[node name="Area2D" type="Area2D" parent="." index="3"]
+
+position = Vector2( 0, -48 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" index="0"]
+
+shape = SubResource( 2 )
 
 

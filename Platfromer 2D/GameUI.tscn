@@ -54,7 +54,7 @@ stretch_shrink = 1
 [node name="Viewport" type="Viewport" parent="LevelViewport" index="0"]
 
 arvr = false
-size = Vector2( 1022, 603 )
+size = Vector2( 1023, 604 )
 own_world = true
 world = null
 transparent_bg = false
