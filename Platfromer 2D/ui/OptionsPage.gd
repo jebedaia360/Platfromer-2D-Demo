@@ -22,7 +22,8 @@ func _on_apply():
 			set_window_options(false, false, true)
 		3: # Maximized Borderless
 			set_window_options(false, true, true)
-	
+	update_label(OS.window_size)
+
 	OS.window_size = $VBox/ResolutionBox.resolution
 	
 	if OS.window_size != prev_window_size:

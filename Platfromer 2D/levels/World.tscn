@@ -3,12 +3,14 @@
 [ext_resource path="res://hero/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://titles/jungle_ruins/jungle_ruins_decorations.tres" type="TileSet" id=2]
 [ext_resource path="res://titles/jungle_ruins/jungle_ruins_front.tres" type="TileSet" id=3]
-[ext_resource path="res://Layer.gd" type="Script" id=4]
+[ext_resource path="res://levels/Layer.gd" type="Script" id=4]
 [ext_resource path="res://titles/jungle_ruins/jungle_ruins_back.tres" type="TileSet" id=5]
-[ext_resource path="res://ParallaxLayer.gd" type="Script" id=6]
+[ext_resource path="res://ui/ParallaxLayer.gd" type="Script" id=6]
 [ext_resource path="res://entities/elevenek/elevenek.tscn" type="PackedScene" id=7]
-[ext_resource path="res://AnimPlayer.gd" type="Script" id=8]
-[ext_resource path="res://Elevator.tscn" type="PackedScene" id=9]
+[ext_resource path="res://levels/AnimPlayer.gd" type="Script" id=8]
+[ext_resource path="res://levels/Elevator.tscn" type="PackedScene" id=9]
+
+
 
 [sub_resource type="Curve2D" id=1]
 

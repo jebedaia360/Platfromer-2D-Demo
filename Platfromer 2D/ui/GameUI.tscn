@@ -1,14 +1,15 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://LevelViewport.gd" type="Script" id=1]
-[ext_resource path="res://World.tscn" type="PackedScene" id=2]
-[ext_resource path="res://CollectedLabel.gd" type="Script" id=3]
-[ext_resource path="res://entities/elevenek/body.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Menu.gd" type="Script" id=5]
-[ext_resource path="res://ubuntu-font-family/UB22C3.tres" type="DynamicFont" id=6]
-[ext_resource path="res://OptionsPage.gd" type="Script" id=7]
-[ext_resource path="res://WindowBox.gd" type="Script" id=8]
-[ext_resource path="res://ResolutionBox.gd" type="Script" id=9]
+[ext_resource path="res://ui/GameUI.gd" type="Script" id=1]
+[ext_resource path="res://ui/LevelViewport.gd" type="Script" id=2]
+[ext_resource path="res://levels/World.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/CollectedLabel.gd" type="Script" id=4]
+[ext_resource path="res://entities/elevenek/body.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ui/Menu.gd" type="Script" id=6]
+[ext_resource path="res://ubuntu-font-family/UB22C3.tres" type="DynamicFont" id=7]
+[ext_resource path="res://ui/OptionsPage.gd" type="Script" id=8]
+[ext_resource path="res://ui/WindowBox.gd" type="Script" id=9]
+[ext_resource path="res://ui/ResolutionBox.gd" type="Script" id=10]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -28,25 +29,15 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 resource_local_to_scene = true
 
-[node name="GameUI" type="Control" index="0"]
+[node name="GameUI" type="Node2D" index="0"]
 
 pause_mode = 2
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1025.0
-margin_bottom = 598.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+script = ExtResource( 1 )
 _sections_unfolded = [ "Hint", "Mouse", "Pause", "Size Flags" ]
 
 [node name="LevelViewport" type="ViewportContainer" parent="." index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -61,7 +52,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 stretch = true
 stretch_shrink = 1
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="Viewport" type="Viewport" parent="LevelViewport" index="0"]
@@ -91,23 +82,23 @@ shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 _sections_unfolded = [ "Rendering" ]
 
-[node name="World" parent="LevelViewport/Viewport" index="0" instance=ExtResource( 2 )]
+[node name="World" parent="LevelViewport/Viewport" index="0" instance=ExtResource( 3 )]
 
 pause_mode = 1
 _sections_unfolded = [ "Material", "Pause" ]
 
 [node name="CollectedLabel" type="Label" parent="." index="1"]
 
-pause_mode = 1
+pause_mode = 2
 editor/display_folded = true
 anchor_left = 1.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 0.0
-margin_left = -109.0
-margin_top = 32.0
-margin_right = -49.0
-margin_bottom = 60.0
+margin_left = 847.0
+margin_top = 24.0
+margin_right = 907.0
+margin_bottom = 52.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -119,13 +110,13 @@ text = "00/00"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Pause", "Visibility", "custom_fonts" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="body" parent="CollectedLabel" index="0" instance=ExtResource( 4 )]
+[node name="body" parent="CollectedLabel" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 76.7281, 12.44 )
 z_index = 10
@@ -147,14 +138,16 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = 960.0
+margin_bottom = 536.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 5 )
-_sections_unfolded = [ "Visibility" ]
+script = ExtResource( 6 )
+_sections_unfolded = [ "Rect", "Visibility" ]
 
 [node name="HBoxContainer" type="VBoxContainer" parent="Menu" index="0"]
 
@@ -194,7 +187,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -219,7 +212,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -245,7 +238,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -271,7 +264,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -297,7 +290,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -315,7 +308,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 428.0
 margin_right = 123.0
-margin_bottom = 531.0
+margin_bottom = 533.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -323,7 +316,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -363,7 +356,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 text = "Do you realy want to quit?
 "
 align = 1
@@ -396,7 +389,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 180.0
+margin_right = 181.0
 margin_bottom = 50.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -405,7 +398,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -421,8 +414,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 184.0
-margin_right = 365.0
+margin_left = 185.0
+margin_right = 366.0
 margin_bottom = 50.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -431,7 +424,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -455,7 +448,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 7 )
+script = ExtResource( 8 )
 
 [node name="VBox" type="VBoxContainer" parent="Menu/OptionsPage" index="0"]
 
@@ -491,7 +484,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 0
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "Size Flags" ]
 
 [node name="Label" type="Label" parent="Menu/OptionsPage/VBox/WindowBox" index="0"]
@@ -508,7 +501,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 text = "Window Type"
 align = 1
 percent_visible = 1.0
@@ -550,7 +543,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -575,7 +568,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 text = "Window Type"
 align = 1
 percent_visible = 1.0
@@ -599,7 +592,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -625,7 +618,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 0
-script = ExtResource( 9 )
+script = ExtResource( 10 )
 _sections_unfolded = [ "Size Flags" ]
 
 [node name="Label" type="Label" parent="Menu/OptionsPage/VBox/ResolutionBox" index="0"]
@@ -642,7 +635,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 text = "Resolution"
 align = 1
 percent_visible = 1.0
@@ -683,7 +676,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -708,7 +701,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 text = "Resolution"
 align = 1
 percent_visible = 1.0
@@ -732,7 +725,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -758,7 +751,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
