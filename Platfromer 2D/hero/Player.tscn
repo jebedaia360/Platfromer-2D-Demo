@@ -1441,7 +1441,7 @@ height = 45.3936
 
 [node name="Player" type="RigidBody2D"]
 
-position = Vector2( -78.84, -149.456 )
+position = Vector2( 359.67, 207.259 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -1493,7 +1493,7 @@ base_path = NodePath("..")
 active = false
 data = {
 "active": false,
-"connections": [ "land", "out", 0, "anim-jump", "air", 0, "idle-run", "air", 1, "anim", "air", 2, "anim-idle", "idle-run", 0, "anim-run", "idle-run", 1, "air", "land", 0, "anim-land", "land", 1 ],
+"connections": [ "land", "out", 0, "anim-idle", "idle-run", 0, "anim-run", "idle-run", 1, "air", "land", 0, "anim-land", "land", 1, "anim-jump", "air", 0, "idle-run", "air", 1, "anim", "air", 2 ],
 "master": NodePath("../AnimationPlayer"),
 "nodes": [ {
 "filter": [  ],
@@ -1505,6 +1505,24 @@ data = {
 "id": "out",
 "position": Vector2( 803, 76 ),
 "type": "output"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "idle-run",
+"position": Vector2( 227, 87 ),
+"type": "blend2"
+}, {
+"filter": [  ],
+"from": "land",
+"id": "anim-land",
+"position": Vector2( 548, 225 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "jump",
+"id": "anim-jump",
+"position": Vector2( 374, 37 ),
+"type": "animation"
 }, {
 "filter": [  ],
 "from": "idle",
@@ -1518,29 +1536,6 @@ data = {
 "position": Vector2( 47, 164 ),
 "type": "animation"
 }, {
-"blend": 0.0,
-"id": "air",
-"position": Vector2( 560, 63 ),
-"type": "blend3"
-}, {
-"blend": 0.0,
-"filter": [  ],
-"id": "idle-run",
-"position": Vector2( 227, 87 ),
-"type": "blend2"
-}, {
-"filter": [  ],
-"from": "jump",
-"id": "anim-jump",
-"position": Vector2( 374, 37 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "land",
-"id": "anim-land",
-"position": Vector2( 548, 225 ),
-"type": "animation"
-}, {
 "autorestart": true,
 "autorestart_delay": 1.0,
 "autorestart_random_delay": 0.0,
@@ -1551,6 +1546,11 @@ data = {
 "mix": false,
 "position": Vector2( 687, 79 ),
 "type": "oneshot"
+}, {
+"blend": 0.0,
+"id": "air",
+"position": Vector2( 560, 63 ),
+"type": "blend3"
 } ]
 }
 
