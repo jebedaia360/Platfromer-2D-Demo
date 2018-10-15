@@ -28,7 +28,6 @@ func _ready():
 	$HBox/PrevButton.connect("pressed", self, "_on_prev_button")
 	$HBox/NextButton.connect("pressed", self, "_on_next_button")
 
-
 func _on_visibility_changed():
 	if not visible:
 		return
@@ -36,9 +35,7 @@ func _on_visibility_changed():
 	update_label(OS.window_size)
 
 func update_label(size = resolution_types[current_choice_id]):
-	var width_str = size.x
-	var height_str = size.y
-	$HBox/Label.text = str(width_str) + "x" + str(height_str)
+	$HBox/Label.text = str(size.x) + "x" + str(size.y)
 	if not (size in resolution_types):
 		resolution_types.append(size)
 	resolution = size

@@ -28,6 +28,9 @@ func _on_Yes_pressed():
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		visible = !visible
+	
+	if OS.window_minimized:
+		visible = true
 
 func _on_Options_pressed():
 	show_page($OptionsPage)
