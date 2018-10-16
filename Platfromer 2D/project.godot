@@ -18,13 +18,6 @@ config/icon="res://icon.png"
 
 globals="*res://globals/globals.gd"
 
-[display]
-
-window/size/resizable=false
-window/size/test_width=1024
-window/size/test_height=600
-window/stretch/aspect="expand"
-
 [rendering]
 
 quality/intended_usage/framebuffer_allocation=0

@@ -36,7 +36,7 @@ tracks/0/keys = {
 "values": [ 0.0, 0.0, 1.0, 1.0, 0.0 ]
 }
 
-[node name="World" type="Node2D" index="0"]
+[node name="World" type="Node2D"]
 
 _sections_unfolded = [ "Material" ]
 
@@ -293,6 +293,7 @@ position = Vector2( 736, -384 )
 
 [node name="ElevatorPath" type="Path2D" parent="." index="16"]
 
+editor/display_folded = true
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 position = Vector2( 544, 64 )
 curve = SubResource( 1 )

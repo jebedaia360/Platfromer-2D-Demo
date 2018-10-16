@@ -4,7 +4,6 @@ extends VBoxContainer
 var resolution_types = [
 	Vector2(640, 480),
 	Vector2(800, 480),
-	Vector2(800, 600),
 	Vector2(1024, 600),
 	Vector2(1024, 768),
 	Vector2(1200, 900),
@@ -28,10 +27,7 @@ func _ready():
 	$HBox/PrevButton.connect("pressed", self, "_on_prev_button")
 	$HBox/NextButton.connect("pressed", self, "_on_next_button")
 
-func _on_visibility_changed():
-	if not visible:
-		return
-	
+func _process(delta):
 	update_label(OS.window_size)
 
 func update_label(size = resolution_types[current_choice_id]):

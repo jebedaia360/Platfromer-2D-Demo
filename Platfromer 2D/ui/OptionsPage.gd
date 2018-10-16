@@ -27,7 +27,7 @@ func _on_apply():
 	
 	if OS.window_size != prev_window_size:
 		var width = globals.default_window_size.x
-		globals.camera_zoom = width / OS.window_size.x * globals.default_camera_zoom
+		globals.camera_zoom = OS.window_size.x / width * globals.default_camera_zoom
 		prev_window_size = OS.window_size
 	
 	$VBox/ResolutionBox.update_label(OS.window_size)
