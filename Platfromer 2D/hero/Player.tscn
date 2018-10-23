@@ -1493,7 +1493,7 @@ base_path = NodePath("..")
 active = false
 data = {
 "active": false,
-"connections": [ "land", "out", 0, "air", "land", 0, "anim-land", "land", 1, "anim-idle", "idle-run", 0, "anim-run", "idle-run", 1, "anim-jump", "air", 0, "idle-run", "air", 1, "anim", "air", 2 ],
+"connections": [ "land", "out", 0, "anim-jump", "air", 0, "idle-run", "air", 1, "anim", "air", 2, "anim-idle", "idle-run", 0, "anim-run", "idle-run", 1, "air", "land", 0, "anim-land", "land", 1 ],
 "master": NodePath("../AnimationPlayer"),
 "nodes": [ {
 "filter": [  ],
@@ -1505,6 +1505,17 @@ data = {
 "id": "out",
 "position": Vector2( 803, 76 ),
 "type": "output"
+}, {
+"blend": 0.0,
+"id": "air",
+"position": Vector2( 560, 63 ),
+"type": "blend3"
+}, {
+"filter": [  ],
+"from": "run",
+"id": "anim-run",
+"position": Vector2( 47, 164 ),
+"type": "animation"
 }, {
 "filter": [  ],
 "from": "idle",
@@ -1524,6 +1535,12 @@ data = {
 "position": Vector2( 548, 225 ),
 "type": "animation"
 }, {
+"blend": 0.0,
+"filter": [  ],
+"id": "idle-run",
+"position": Vector2( 227, 87 ),
+"type": "blend2"
+}, {
 "autorestart": true,
 "autorestart_delay": 1.0,
 "autorestart_random_delay": 0.0,
@@ -1534,23 +1551,6 @@ data = {
 "mix": false,
 "position": Vector2( 687, 79 ),
 "type": "oneshot"
-}, {
-"filter": [  ],
-"from": "run",
-"id": "anim-run",
-"position": Vector2( 47, 164 ),
-"type": "animation"
-}, {
-"blend": 0.0,
-"filter": [  ],
-"id": "idle-run",
-"position": Vector2( 227, 87 ),
-"type": "blend2"
-}, {
-"blend": 0.0,
-"id": "air",
-"position": Vector2( 560, 63 ),
-"type": "blend3"
 } ]
 }
 
