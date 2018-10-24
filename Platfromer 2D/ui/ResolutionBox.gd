@@ -23,7 +23,7 @@ func _ready():
 	]
 
 	globals.connect("window_resize", self, "_on_window_resize")
-	
+	_on_window_resize()
 
 func _on_window_resize():
 	update_label(OS.window_size)

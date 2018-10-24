@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://hero/Player.gd" type="Script" id=1]
 [ext_resource path="res://hero/shoe.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://hero/head.png" type="Texture" id=7]
 [ext_resource path="res://hero/hair_pice.png" type="Texture" id=8]
 [ext_resource path="res://hero/bandana_pice.png" type="Texture" id=9]
+[ext_resource path="res://hero/Camera2D.gd" type="Script" id=10]
 
 [sub_resource type="Animation" id=1]
 
@@ -1439,7 +1440,7 @@ custom_solver_bias = 0.0
 radius = 10.0
 height = 45.3936
 
-[node name="Player" type="RigidBody2D"]
+[node name="Player" type="RigidBody2D" index="0"]
 
 position = Vector2( 359.67, 207.259 )
 input_pickable = false
@@ -1506,33 +1507,21 @@ data = {
 "position": Vector2( 803, 76 ),
 "type": "output"
 }, {
+"filter": [  ],
+"from": "land",
+"id": "anim-land",
+"position": Vector2( 548, 225 ),
+"type": "animation"
+}, {
 "blend": 0.0,
 "id": "air",
 "position": Vector2( 560, 63 ),
 "type": "blend3"
 }, {
 "filter": [  ],
-"from": "run",
-"id": "anim-run",
-"position": Vector2( 47, 164 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "idle",
-"id": "anim-idle",
-"position": Vector2( 50, 50 ),
-"type": "animation"
-}, {
-"filter": [  ],
 "from": "jump",
 "id": "anim-jump",
 "position": Vector2( 374, 37 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "land",
-"id": "anim-land",
-"position": Vector2( 548, 225 ),
 "type": "animation"
 }, {
 "blend": 0.0,
@@ -1551,6 +1540,18 @@ data = {
 "mix": false,
 "position": Vector2( 687, 79 ),
 "type": "oneshot"
+}, {
+"filter": [  ],
+"from": "run",
+"id": "anim-run",
+"position": Vector2( 47, 164 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "idle",
+"id": "anim-idle",
+"position": Vector2( 50, 50 ),
+"type": "animation"
 } ]
 }
 
@@ -1684,6 +1685,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="7"]
 
+pause_mode = 2
 position = Vector2( 0.863739, 4.16351 )
 anchor_mode = 1
 rotating = false
@@ -1707,6 +1709,7 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+script = ExtResource( 10 )
 _sections_unfolded = [ "Pause" ]
 
 

@@ -24,4 +24,9 @@ func _on_apply():
 			set_window_options(false, true, true)
 		
 	globals.window_size = $VBox/ResolutionBox.resolution
+	var w = globals.window_size.x
+	if OS.window_fullscreen:
+		w = OS.get_screen_size().x
+	
+	globals.camera_zoom = globals.prev_window_size.x / w * globals.default_camera_zoom
 

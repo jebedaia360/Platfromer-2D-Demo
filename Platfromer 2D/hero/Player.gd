@@ -10,13 +10,6 @@ var running = false
 
 func _ready():
 	$AnimationTreePlayer.active = true
-	globals.connect("window_resize", self, "_on_window_resize")
-
-func _on_window_resize():
-	var width = globals.default_window_size.x
-	globals.camera_zoom = OS.window_size.x / width * globals.default_camera_zoom
-	$Camera2D.zoom.x = globals.camera_zoom
-	$Camera2D.zoom.y = globals.camera_zoom
 
 func _process(delta):
 	var x = clamp(linear_velocity.x, -1, 1)

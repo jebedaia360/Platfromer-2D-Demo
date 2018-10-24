@@ -29,7 +29,7 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 resource_local_to_scene = true
 
-[node name="GameUI" type="Control" index="0"]
+[node name="GameUI" type="Control"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -144,6 +144,7 @@ autostart = true
 
 [node name="Menu" type="Panel" parent="UIScaler" index="1"]
 
+editor/display_folded = true
 visible = false
 self_modulate = Color( 1, 1, 1, 0.588235 )
 anchor_left = 0.0
