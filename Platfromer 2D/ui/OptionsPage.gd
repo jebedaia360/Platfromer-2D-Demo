@@ -1,9 +1,6 @@
 extends Panel
 
-var prev_window_size = Vector2()
-
 func _ready():
-	prev_window_size = globals.default_window_size
 	$VBox/ApplyButton.connect("pressed", self, "_on_apply")
 
 func set_window_options(fullscreen, borderless, maximized):
@@ -22,7 +19,7 @@ func _on_apply():
 			set_window_options(false, false, true)
 		3: # Maximized Borderless
 			set_window_options(false, true, true)
-		
+	
 	globals.window_size = $VBox/ResolutionBox.resolution
 	var w = globals.window_size.x
 	if OS.window_fullscreen:

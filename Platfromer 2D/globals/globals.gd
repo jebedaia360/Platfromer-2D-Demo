@@ -12,7 +12,7 @@ var prev_window_size
 
 signal collected_changed
 signal camera_zoom_changed
-signal window_resize
+signal window_resized
 signal window_minimized
 signal window_maximized
 signal window_fullscreen
@@ -31,7 +31,7 @@ func _get_collected():
 func _set_window_size(value):
 	prev_window_size = OS.window_size
 	OS.window_size = value
-	emit_signal("window_resize")
+	emit_signal("window_resized")
 
 func _get_window_size():
 	return OS.window_size

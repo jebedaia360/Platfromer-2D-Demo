@@ -22,10 +22,10 @@ func _ready():
 		Vector2(2560, 1600)
 	]
 
-	globals.connect("window_resize", self, "_on_window_resize")
-	_on_window_resize()
+	globals.connect("window_resized", self, "_on_window_resized")
+	_on_window_resized()
 
-func _on_window_resize():
+func _on_window_resized():
 	update_label(OS.window_size)
 
 func update_label(size = options_list[current_choice_id]):

@@ -8,7 +8,7 @@ func _ready():
 		"Maximized Borderless"
 	]
 
-	globals.connect("window_resize", self, "_on_window_type_changed")
+	globals.connect("window_resized", self, "_on_window_type_changed")
 	_on_window_type_changed()
 
 func _on_window_type_changed():
