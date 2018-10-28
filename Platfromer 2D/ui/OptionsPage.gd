@@ -2,6 +2,8 @@ extends Panel
 
 func _ready():
 	$VBox/ApplyButton.connect("pressed", self, "_on_apply")
+	$VBox/VSyncButton.pressed = OS.vsync_enabled
+
 
 func set_window_options(fullscreen, borderless, maximized):
 	OS.window_fullscreen = fullscreen
@@ -26,4 +28,7 @@ func _on_apply():
 		w = OS.get_screen_size().x
 	
 	globals.camera_zoom = globals.prev_window_size.x / w * globals.default_camera_zoom
+
+	OS.vsync_enabled = $VBox/VSyncButton.pressed
+
 

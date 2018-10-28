@@ -162,7 +162,6 @@ _sections_unfolded = [ "Rect", "Visibility" ]
 
 [node name="HBoxContainer" type="VBoxContainer" parent="UIScaler/Menu" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -483,6 +482,7 @@ alignment = 0
 
 [node name="WindowBox" type="VBoxContainer" parent="UIScaler/Menu/OptionsPage/VBox" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -523,6 +523,7 @@ _sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
 [node name="HBox" type="HBoxContainer" parent="UIScaler/Menu/OptionsPage/VBox/WindowBox" index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -615,6 +616,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="ResolutionBox" type="VBoxContainer" parent="UIScaler/Menu/OptionsPage/VBox" index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -656,6 +658,7 @@ _sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
 [node name="HBox" type="HBoxContainer" parent="UIScaler/Menu/OptionsPage/VBox/ResolutionBox" index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -746,7 +749,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="ApplyButton" type="Button" parent="UIScaler/Menu/OptionsPage/VBox" index="2"]
+[node name="VSyncButton" type="Button" parent="UIScaler/Menu/OptionsPage/VBox" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -754,7 +757,33 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 132.0
 margin_right = 363.0
-margin_bottom = 164.0
+margin_bottom = 179.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 7 )
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = SubResource( 3 )
+text = "VSycn"
+flat = false
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="ApplyButton" type="Button" parent="UIScaler/Menu/OptionsPage/VBox" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 183.0
+margin_right = 363.0
+margin_bottom = 230.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
