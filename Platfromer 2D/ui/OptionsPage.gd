@@ -4,7 +4,6 @@ func _ready():
 	$VBox/ApplyButton.connect("pressed", self, "_on_apply")
 	$VBox/VSyncButton.pressed = OS.vsync_enabled
 
-
 func set_window_options(fullscreen, borderless, maximized):
 	OS.window_fullscreen = fullscreen
 	OS.window_borderless = borderless

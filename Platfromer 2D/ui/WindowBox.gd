@@ -2,10 +2,10 @@ extends "CollapsedList.gd"
 
 func _ready():
 	options_list = [
-		"Windowed",
-		"Fullscreen",
-		"Maximized",
-		"Maximized Borderless"
+		"Windowed", # 0
+		"Fullscreen", # 1
+		"Maximized", # 2
+		"Maximized Borderless" # 3
 	]
 
 	globals.connect("window_resized", self, "_on_window_type_changed")

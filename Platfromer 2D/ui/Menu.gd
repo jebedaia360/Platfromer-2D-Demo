@@ -6,10 +6,7 @@ func _ready():
 	globals.connect("window_minimized", self, "show")
 
 func _on_Menu_visibility_changed():
-	if visible:
-		get_tree().paused = true
-	else:
-		get_tree().paused = false
+	get_tree().paused = visible
 
 func show_page(node):
 	if current_page != null:
