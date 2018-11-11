@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://ui/LevelViewport.gd" type="Script" id=1]
 [ext_resource path="res://levels/World.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://ui/OptionsPage.gd" type="Script" id=8]
 [ext_resource path="res://ui/WindowBox.gd" type="Script" id=9]
 [ext_resource path="res://ui/ResolutionBox.gd" type="Script" id=10]
+[ext_resource path="res://ui/VSyncBox.gd" type="Script" id=11]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -26,6 +27,10 @@ font_data = SubResource( 1 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [sub_resource type="ButtonGroup" id=3]
+
+resource_local_to_scene = true
+
+[sub_resource type="ButtonGroup" id=4]
 
 resource_local_to_scene = true
 
@@ -98,6 +103,7 @@ _sections_unfolded = [ "Material", "Pause" ]
 
 [node name="UIScaler" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
 script = ExtResource( 3 )
 
 [node name="CollectedLabel" type="Label" parent="UIScaler" index="0"]
@@ -144,6 +150,7 @@ autostart = true
 
 [node name="Menu" type="Panel" parent="UIScaler" index="1"]
 
+editor/display_folded = true
 visible = false
 self_modulate = Color( 1, 1, 1, 0.588235 )
 anchor_left = 0.0
@@ -450,7 +457,6 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="OptionsPage" type="Panel" parent="UIScaler/Menu" index="2"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -481,7 +487,9 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_constants/separation = 10
 alignment = 0
+_sections_unfolded = [ "custom_constants" ]
 
 [node name="WindowBox" type="VBoxContainer" parent="UIScaler/Menu/OptionsPage/VBox" index="0"]
 
@@ -500,7 +508,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 0
 script = ExtResource( 9 )
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "custom_constants" ]
 
 [node name="Label" type="Label" parent="UIScaler/Menu/OptionsPage/VBox/WindowBox" index="0"]
 
@@ -624,9 +632,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 66.0
+margin_top = 72.0
 margin_right = 363.0
-margin_bottom = 128.0
+margin_bottom = 134.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -751,15 +759,106 @@ flat = false
 align = 1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="ApplyButton" type="Button" parent="UIScaler/Menu/OptionsPage/VBox" index="2"]
+[node name="VSyncBox" type="HBoxContainer" parent="UIScaler/Menu/OptionsPage/VBox" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 132.0
+margin_top = 144.0
 margin_right = 363.0
-margin_bottom = 164.0
+margin_bottom = 176.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+script = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="UIScaler/Menu/OptionsPage/VBox/VSyncBox" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 118.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 7 )
+text = "VSync"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
+
+[node name="OffButton" type="Button" parent="UIScaler/Menu/OptionsPage/VBox/VSyncBox" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 122.0
+margin_right = 240.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 7 )
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = SubResource( 4 )
+text = "Off"
+flat = false
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="OnButton" type="Button" parent="UIScaler/Menu/OptionsPage/VBox/VSyncBox" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 244.0
+margin_right = 363.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 7 )
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = SubResource( 4 )
+text = "On"
+flat = false
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="ApplyButton" type="Button" parent="UIScaler/Menu/OptionsPage/VBox" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 186.0
+margin_right = 363.0
+margin_bottom = 218.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2

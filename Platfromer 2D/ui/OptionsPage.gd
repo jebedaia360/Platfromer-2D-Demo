@@ -5,7 +5,6 @@ var prev_window_size = Vector2()
 func _ready():
 	prev_window_size = globals.default_window_size
 	$VBox/ApplyButton.connect("pressed", self, "_on_apply")
-	connect("visibility_changed", self, "_on_visibility_changed")
 
 func set_window_options(fullscreen, maximized):
 	globals.window_fullscreen = fullscreen
@@ -29,5 +28,4 @@ func _on_apply():
 	
 	$VBox/ResolutionBox.update_label(globals.window_size)
 
-func _on_visibility_changed():
-	pass
+	OS.vsync_enabled = $VBox/VSyncBox.vsync_enabled
