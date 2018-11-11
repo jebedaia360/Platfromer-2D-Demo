@@ -103,7 +103,6 @@ script = ExtResource( 3 )
 [node name="CollectedLabel" type="Label" parent="UIScaler" index="0"]
 
 pause_mode = 2
-editor/display_folded = true
 anchor_left = 1.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -160,7 +159,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 6 )
-_sections_unfolded = [ "Rect", "Visibility" ]
+_sections_unfolded = [ "Visibility" ]
 
 [node name="HBoxContainer" type="VBoxContainer" parent="UIScaler/Menu" index="0"]
 
@@ -777,8 +776,6 @@ text = "Apply"
 flat = false
 align = 1
 _sections_unfolded = [ "custom_fonts" ]
-
-[connection signal="visibility_changed" from="UIScaler/Menu" to="UIScaler/Menu" method="_on_Menu_visibility_changed"]
 
 [connection signal="pressed" from="UIScaler/Menu/HBoxContainer/Return" to="UIScaler/Menu" method="_on_Return_pressed"]
 

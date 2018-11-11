@@ -2,6 +2,9 @@ extends Panel
 
 var current_page = null
 
+func _ready():
+	connect("visibility_changed", self, "_on_visibility_changed")
+
 func _on_visibility_changed():
 	if visible:
 		get_tree().paused = true
