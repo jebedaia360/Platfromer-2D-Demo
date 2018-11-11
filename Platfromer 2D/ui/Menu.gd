@@ -2,11 +2,11 @@ extends Panel
 
 var current_page = null
 
-func _ready():
-	globals.connect("window_minimized", self, "show")
-
-func _on_Menu_visibility_changed():
-	get_tree().paused = visible
+func _on_visibility_changed():
+	if visible:
+		get_tree().paused = true
+	else:
+		get_tree().paused = false
 
 func show_page(node):
 	if current_page != null:
@@ -28,6 +28,9 @@ func _on_Yes_pressed():
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		visible = !visible
+	
+	if OS.window_minimized:
+		visible = true
 
 func _on_Options_pressed():
 	show_page($OptionsPage)

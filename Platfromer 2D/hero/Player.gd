@@ -12,6 +12,8 @@ func _ready():
 	$AnimationTreePlayer.active = true
 
 func _process(delta):
+	$Camera2D.zoom.x = globals.camera_zoom
+	$Camera2D.zoom.y = globals.camera_zoom
 	var x = clamp(linear_velocity.x, -1, 1)
 	
 	var camx = $Camera2D.offset.x

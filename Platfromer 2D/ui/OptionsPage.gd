@@ -1,8 +1,10 @@
 extends Panel
 
+var prev_window_size = Vector2()
+
 func _ready():
+	prev_window_size = globals.default_window_size
 	$VBox/ApplyButton.connect("pressed", self, "_on_apply")
-	$VBox/VSyncButton.pressed = OS.vsync_enabled
 
 func set_window_options(fullscreen, borderless, maximized):
 	OS.window_fullscreen = fullscreen
@@ -20,14 +22,12 @@ func _on_apply():
 			set_window_options(false, false, true)
 		3: # Maximized Borderless
 			set_window_options(false, true, true)
+		
+	OS.window_size = $VBox/ResolutionBox.resolution
 	
-	globals.window_size = $VBox/ResolutionBox.resolution
-	var w = globals.window_size.x
-	if OS.window_fullscreen:
-		w = OS.get_screen_size().x
+	if OS.window_size != prev_window_size:
+		var width = globals.default_window_size.x
+		globals.camera_zoom = OS.window_size.x / width * globals.default_camera_zoom
+		prev_window_size = OS.window_size
 	
-	globals.camera_zoom = globals.prev_window_size.x / w * globals.default_camera_zoom
-
-	OS.vsync_enabled = $VBox/VSyncButton.pressed
-
-
+	$VBox/ResolutionBox.update_label(OS.window_size)

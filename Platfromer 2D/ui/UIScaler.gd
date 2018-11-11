@@ -1,11 +1,13 @@
 extends Node2D
 
-func _ready():
-	globals.connect("window_resized", self, "_on_window_resized")
+var prev_window_size = Vector2()
 
-func _on_window_resized():
-	var w = globals.window_size.x
-	if OS.window_fullscreen:
-		w = OS.get_screen_size().x
-	scale.x = w / globals.prev_window_size.x
-	scale.y = scale.x
+func _ready():
+	prev_window_size = globals.default_window_size
+
+func _process(delta):
+	if OS.window_size != prev_window_size:
+		var width = globals.default_window_size.x
+		scale.x = OS.window_size.x / width
+		scale.y = scale.x
+		prev_window_size = OS.window_size

@@ -1,10 +1,13 @@
 extends ViewportContainer
 
-func _ready():
-	globals.connect("window_resized", self, "_on_window_resized")
+var prev_window_size = Vector2()
 
-func _on_window_resized():
-	rect_size = OS.window_size
-	$Viewport.size = OS.window_size
-	prev_window_size = OS.window_size
+func _ready():
+	prev_window_size = globals.default_window_size
+
+func _process(delta):
+	if OS.window_size != prev_window_size:
+		rect_size = OS.window_size
+		$Viewport.size = OS.window_size
+		prev_window_size = OS.window_size
 
