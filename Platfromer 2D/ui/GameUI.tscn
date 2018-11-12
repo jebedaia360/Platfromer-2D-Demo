@@ -7,10 +7,11 @@
 [ext_resource path="res://entities/elevenek/body.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ui/Menu.gd" type="Script" id=6]
 [ext_resource path="res://ubuntu-font-family/UB22C3.tres" type="DynamicFont" id=7]
-[ext_resource path="res://ui/OptionsPage.gd" type="Script" id=8]
-[ext_resource path="res://ui/WindowBox.gd" type="Script" id=9]
-[ext_resource path="res://ui/ResolutionBox.gd" type="Script" id=10]
-[ext_resource path="res://ui/VSyncBox.gd" type="Script" id=11]
+[ext_resource path="res://ui/OptionsPage/OptionsPage.gd" type="Script" id=8]
+[ext_resource path="res://ui/OptionsPage/WindowBox.gd" type="Script" id=9]
+[ext_resource path="res://ui/OptionsPage/ResolutionBox.gd" type="Script" id=10]
+[ext_resource path="res://ui/OptionsPage/VSyncBox.gd" type="Script" id=11]
+
 
 [sub_resource type="DynamicFontData" id=1]
 
