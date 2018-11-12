@@ -1,9 +1,6 @@
 extends Panel
 
-var prev_window_size = Vector2()
-
 func _ready():
-	prev_window_size = globals.default_window_size
 	$VBox/ApplyButton.connect("pressed", self, "_on_apply")
 
 func set_window_options(fullscreen, maximized):
@@ -22,7 +19,7 @@ func _on_apply():
 		
 	globals.window_size = $VBox/ResolutionBox.resolution
 	
-	if globals.window_size != prev_window_size:
+	if globals.window_size != globals.default_window_size:
 		var width = globals.default_window_size.x
 		globals.camera_zoom = width / globals.window_size.x * globals.default_camera_zoom
 	

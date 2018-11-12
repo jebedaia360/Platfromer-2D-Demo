@@ -27,7 +27,7 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 resource_local_to_scene = true
 
-[node name="GameUI" type="Control" index="0"]
+[node name="GameUI" type="Control"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -44,7 +44,6 @@ _sections_unfolded = [ "Hint", "Mouse", "Pause", "Size Flags" ]
 
 [node name="LevelViewport" type="ViewportContainer" parent="." index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -449,6 +448,8 @@ align = 1
 _sections_unfolded = [ "custom_fonts" ]
 
 [node name="OptionsPage" parent="UIScaler/Menu" index="2" instance=ExtResource( 8 )]
+
+visible = false
 
 [connection signal="pressed" from="UIScaler/Menu/HBoxContainer/Return" to="UIScaler/Menu" method="_on_Return_pressed"]
 
