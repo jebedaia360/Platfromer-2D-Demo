@@ -4,12 +4,10 @@ var current_page = null
 
 func _ready():
 	connect("visibility_changed", self, "_on_visibility_changed")
+	globals.connect("window_minimized_changed", self, "_on_window_minimized_changed")
 
 func _on_visibility_changed():
-	if visible:
-		get_tree().paused = true
-	else:
-		get_tree().paused = false
+	get_tree().paused = visible
 
 func show_page(node):
 	if current_page != null:
@@ -31,9 +29,9 @@ func _on_Yes_pressed():
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		visible = !visible
-	
-	if OS.window_minimized:
-		visible = true
 
 func _on_Options_pressed():
 	show_page($OptionsPage)
+
+func _on_window_minimized_changed(value):
+	show()

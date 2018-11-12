@@ -101,6 +101,7 @@ script = ExtResource( 3 )
 [node name="CollectedLabel" type="Label" parent="UIScaler" index="0"]
 
 pause_mode = 2
+editor/display_folded = true
 anchor_left = 1.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -379,6 +380,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UIScaler/Menu/QuitPage" index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 1.0
 anchor_right = 1.0
