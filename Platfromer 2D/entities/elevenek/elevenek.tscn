@@ -28,15 +28,13 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="body" parent="." index="1" instance=ExtResource( 2 )]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="2"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
 
 stream = ExtResource( 3 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "SFX"
-area_mask = 1
 
 
