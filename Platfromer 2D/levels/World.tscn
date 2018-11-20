@@ -258,6 +258,7 @@ __meta__ = {
 [node name="elevenek" parent="." index="7" instance=ExtResource( 7 )]
 
 position = Vector2( 224, -128 )
+_sections_unfolded = [ "Audio Bus", "Transform" ]
 
 [node name="elevenek2" parent="." index="8" instance=ExtResource( 7 )]
 
