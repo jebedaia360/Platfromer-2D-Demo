@@ -5,6 +5,7 @@ const default_window_size = Vector2(1024, 600)
 
 var collected = 0 setget _set_collected, _get_collected
 var to_collect = 0
+var player
 
 var _prev_window_size
 var _prev_window_minimized

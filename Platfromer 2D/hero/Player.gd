@@ -7,8 +7,8 @@ export var jump_high = 400
 var curr_speed = 0
 var running = false
 
-
 func _ready():
+	globals.player = self
 	$AnimationTreePlayer.active = true
 
 func _process(delta):
