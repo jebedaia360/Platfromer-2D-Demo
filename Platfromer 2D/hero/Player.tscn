@@ -1,15 +1,16 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://hero/Player.gd" type="Script" id=1]
-[ext_resource path="res://hero/shoe.png" type="Texture" id=2]
-[ext_resource path="res://hero/back_hand.png" type="Texture" id=3]
-[ext_resource path="res://hero/front_hand.png" type="Texture" id=4]
-[ext_resource path="res://hero/body.png" type="Texture" id=5]
-[ext_resource path="res://hero/hood.png" type="Texture" id=6]
-[ext_resource path="res://hero/head.png" type="Texture" id=7]
-[ext_resource path="res://hero/hair_pice.png" type="Texture" id=8]
-[ext_resource path="res://hero/bandana_pice.png" type="Texture" id=9]
+[ext_resource path="res://hero/sprites/shoe.png" type="Texture" id=2]
+[ext_resource path="res://hero/sprites/back_hand.png" type="Texture" id=3]
+[ext_resource path="res://hero/sprites/front_hand.png" type="Texture" id=4]
+[ext_resource path="res://hero/sprites/body.png" type="Texture" id=5]
+[ext_resource path="res://hero/sprites/hood.png" type="Texture" id=6]
+[ext_resource path="res://hero/sprites/head.png" type="Texture" id=7]
+[ext_resource path="res://hero/sprites/hair_pice.png" type="Texture" id=8]
+[ext_resource path="res://hero/sprites/bandana_pice.png" type="Texture" id=9]
 [ext_resource path="res://hero/Camera2D.gd" type="Script" id=10]
+
 
 [sub_resource type="Animation" id=1]
 
