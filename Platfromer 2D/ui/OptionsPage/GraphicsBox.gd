@@ -1,7 +1,7 @@
-extends Panel
+extends VBoxContainer
 
 func _ready():
-	$VBox/ApplyButton.connect("pressed", self, "_on_apply")
+	$ApplyButton.connect("pressed", self, "_on_apply")
 
 func set_window_options(fullscreen, maximized):
 	globals.window_fullscreen = fullscreen
