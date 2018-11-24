@@ -37,7 +37,7 @@ tracks/0/keys = {
 "values": [ 0.0, 0.0, 1.0, 1.0, 0.0 ]
 }
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Material" ]
 
@@ -297,13 +297,14 @@ modif = 60.0
 
 [node name="Pickups" type="Node2D" parent="." index="4"]
 
+editor/display_folded = true
 z_index = -1
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="elevenek" parent="Pickups" index="0" instance=ExtResource( 9 )]
 
 position = Vector2( 224, -128 )
-_sections_unfolded = [ "Collision", "Transform" ]
+_sections_unfolded = [ "Audio Bus", "Collision", "Transform" ]
 
 [node name="elevenek2" parent="Pickups" index="1" instance=ExtResource( 9 )]
 

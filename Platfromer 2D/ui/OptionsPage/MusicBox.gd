@@ -9,6 +9,7 @@ func _ready():
 	music_bus = AudioServer.get_bus_index("Music")
 	sfx_bus = AudioServer.get_bus_index("SFX")
 	
+	set_toggle(master_bus, $VolumeBox/OnButton, $VolumeBox/OffButton)
 	$VolumeBox/OnButton.connect(
 		"pressed", AudioServer,
 		"set_bus_mute", [master_bus, false]
@@ -23,7 +24,8 @@ func _ready():
 		"value_changed", self,
 		"set_bus_volume", [master_bus]
 	)
-	
+
+	set_toggle(music_bus, $MusicBox/OnButton, $MusicBox/OffButton)
 	$MusicBox/OnButton.connect(
 		"pressed", AudioServer,
 		"set_bus_mute", [music_bus, false]
@@ -39,6 +41,7 @@ func _ready():
 		"set_bus_volume", [music_bus]
 	)
 	
+	set_toggle(sfx_bus, $SFXBox/OnButton, $SFXBox/OffButton)
 	$SFXBox/OnButton.connect(
 		"pressed", AudioServer,
 		"set_bus_mute", [sfx_bus, false]
@@ -69,4 +72,10 @@ func set_bus_volume(value, bus_id):
 
 func get_bus_volume(bus_id):
 	return AudioServer.get_bus_volume_db(bus_id)
+
+func set_toggle(bus_id, on_button, off_button):
+	if AudioServer.is_bus_mute(bus_id):
+		off_button.pressed = true
+	else:
+		on_button.pressed = true
 
