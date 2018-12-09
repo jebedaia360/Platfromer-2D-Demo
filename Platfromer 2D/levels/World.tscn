@@ -8,8 +8,8 @@
 [ext_resource path="res://levels/ParallaxLayer.gd" type="Script" id=6]
 [ext_resource path="res://globals/AnimPlayer.gd" type="Script" id=7]
 [ext_resource path="res://levels/Elevator.tscn" type="PackedScene" id=8]
-[ext_resource path="res://entities/elevenek/elevenek.tscn" type="PackedScene" id=9]
-[ext_resource path="res://music/reusenoise_-_Ouverture.ogg" type="AudioStream" id=10]
+[ext_resource path="res://entities/Liht/liht.tscn" type="PackedScene" id=9]
+[ext_resource path="res://music/Welcome_in_the_intox.ogg" type="AudioStream" id=10]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -297,44 +297,43 @@ modif = 60.0
 
 [node name="Pickups" type="Node2D" parent="." index="4"]
 
-editor/display_folded = true
 z_index = -1
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="elevenek" parent="Pickups" index="0" instance=ExtResource( 9 )]
+[node name="liht" parent="Pickups" index="0" instance=ExtResource( 9 )]
 
 position = Vector2( 224, -128 )
 _sections_unfolded = [ "Audio Bus", "Collision", "Transform" ]
 
-[node name="elevenek2" parent="Pickups" index="1" instance=ExtResource( 9 )]
+[node name="liht2" parent="Pickups" index="1" instance=ExtResource( 9 )]
 
 position = Vector2( 288, -160 )
 
-[node name="elevenek3" parent="Pickups" index="2" instance=ExtResource( 9 )]
+[node name="liht3" parent="Pickups" index="2" instance=ExtResource( 9 )]
 
 position = Vector2( 352, -192 )
 
-[node name="elevenek4" parent="Pickups" index="3" instance=ExtResource( 9 )]
+[node name="liht4" parent="Pickups" index="3" instance=ExtResource( 9 )]
 
 position = Vector2( 416, -224 )
 
-[node name="elevenek5" parent="Pickups" index="4" instance=ExtResource( 9 )]
+[node name="liht5" parent="Pickups" index="4" instance=ExtResource( 9 )]
 
 position = Vector2( 480, -256 )
 
-[node name="elevenek6" parent="Pickups" index="5" instance=ExtResource( 9 )]
+[node name="liht6" parent="Pickups" index="5" instance=ExtResource( 9 )]
 
 position = Vector2( 544, -288 )
 
-[node name="elevenek7" parent="Pickups" index="6" instance=ExtResource( 9 )]
+[node name="liht7" parent="Pickups" index="6" instance=ExtResource( 9 )]
 
 position = Vector2( 608, -320 )
 
-[node name="elevenek8" parent="Pickups" index="7" instance=ExtResource( 9 )]
+[node name="liht8" parent="Pickups" index="7" instance=ExtResource( 9 )]
 
 position = Vector2( 672, -352 )
 
-[node name="elevenek9" parent="Pickups" index="8" instance=ExtResource( 9 )]
+[node name="liht9" parent="Pickups" index="8" instance=ExtResource( 9 )]
 
 position = Vector2( 736, -384 )
 
