@@ -10,8 +10,8 @@ func _ready():
 	sfx_bus = AudioServer.get_bus_index("SFX")
 	
 	set_controls_for_bus(
-		master_bus, $VolumeBox/OnButton, 
-		$VolumeBox/OffButton, VolumeBar
+		master_bus, $VolumeBox/OnButton,
+		$VolumeBox/OffButton, $VolumeBar
 		)
 
 	set_controls_for_bus(
