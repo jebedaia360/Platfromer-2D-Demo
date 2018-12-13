@@ -3,7 +3,7 @@ extends RigidBody2D
 export var cam_speed = 150
 export var max_speed = 300
 export var acc = 600
-export var jump_high = 400
+export var jump_high = 350
 var curr_speed = 0
 var running = false
 
@@ -45,7 +45,6 @@ func _physics_process(delta):
 		
 	elif Input.is_action_pressed("ui_left"):
 		run(delta, -1)
-	
 	else:
 		running = false
 		

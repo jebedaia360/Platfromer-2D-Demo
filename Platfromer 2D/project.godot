@@ -12,7 +12,8 @@ config_version=3
 
 config/name="Platformer 2D 11"
 run/main_scene="res://ui/GameUI.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://Boot.png"
+config/icon="res://Screenshot_2018-12-01 Master-Music(1).png"
 
 [autoload]
 
