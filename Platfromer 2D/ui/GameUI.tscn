@@ -1,16 +1,15 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://ui/LevelViewport.gd" type="Script" id=1]
-[ext_resource path="res://levels/World.tscn" type="PackedScene" id=2]
+[ext_resource path="res://levels/level01/Level01.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ui/UIScaler.gd" type="Script" id=3]
-[ext_resource path="res://ui/CollectedLabel.gd" type="Script" id=4]
-[ext_resource path="res://entities/liht/body.tscn" type="PackedScene" id=5]
-[ext_resource path="res://ui/Menu.gd" type="Script" id=6]
-[ext_resource path="res://backgrounds/advisertmen2t.jpeg" type="Texture" id=7]
-[ext_resource path="res://ui/OptionsPage/OptionsPage.tscn" type="PackedScene" id=8]
-[ext_resource path="res://ubuntu-font-family/UB22C3.tres" type="DynamicFont" id=9]
-[ext_resource path="res://backgrounds/options.jpeg" type="Texture" id=10]
-
+[ext_resource path="res://ubuntu-font-family/UB22C3.tres" type="DynamicFont" id=4]
+[ext_resource path="res://ui/CollectedLabel.gd" type="Script" id=5]
+[ext_resource path="res://entities/liht/body.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ui/Menu.gd" type="Script" id=7]
+[ext_resource path="res://ui/backgrounds/advisertmen2t.jpeg" type="Texture" id=8]
+[ext_resource path="res://ui/OptionsPage/OptionsPage.tscn" type="PackedScene" id=9]
+[ext_resource path="res://ui/backgrounds/options.jpeg" type="Texture" id=10]
 
 [sub_resource type="Animation" id=1]
 
@@ -19,25 +18,11 @@ length = 1.0
 loop = false
 step = 0.1
 
-[sub_resource type="DynamicFontData" id=2]
-
-hinting = 2
-font_path = "res://ubuntu-font-family/UbuntuMono-B.ttf"
-
-[sub_resource type="DynamicFont" id=3]
-
-size = 22
-use_mipmaps = false
-use_filter = true
-extra_spacing_char = 1
-font_data = SubResource( 2 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
-
-[sub_resource type="ButtonGroup" id=4]
+[sub_resource type="ButtonGroup" id=2]
 
 resource_local_to_scene = true
 
-[node name="GameUI" type="Control"]
+[node name="GameUI" type="Control" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -69,8 +54,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 2.0
-margin_top = 4.0
-margin_right = 1026.0
+margin_right = 1030.0
 margin_bottom = 604.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -86,7 +70,7 @@ _sections_unfolded = [ "Pause", "Rect" ]
 [node name="Viewport" type="Viewport" parent="LevelViewport" index="0"]
 
 arvr = false
-size = Vector2( 1024, 600 )
+size = Vector2( 1028, 604 )
 own_world = true
 world = null
 transparent_bg = false
@@ -110,7 +94,7 @@ shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 _sections_unfolded = [ "Rendering" ]
 
-[node name="World" parent="LevelViewport/Viewport" index="0" instance=ExtResource( 2 )]
+[node name="Level01" parent="LevelViewport/Viewport" index="0" instance=ExtResource( 2 )]
 
 pause_mode = 1
 _sections_unfolded = [ "Material", "Pause" ]
@@ -122,14 +106,13 @@ script = ExtResource( 3 )
 [node name="CollectedLabel" type="Label" parent="UIScaler" index="0"]
 
 pause_mode = 2
-editor/display_folded = true
 anchor_left = 1.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 0.0
-margin_left = 783.0
+margin_left = 765.0
 margin_top = 24.0
-margin_right = 843.0
+margin_right = 857.0
 margin_bottom = 52.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -137,22 +120,21 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "00/00"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 _sections_unfolded = [ "Pause", "Visibility", "custom_fonts" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="body" parent="UIScaler/CollectedLabel" index="0" instance=ExtResource( 5 )]
+[node name="body" parent="UIScaler/CollectedLabel" index="0" instance=ExtResource( 6 )]
 
 position = Vector2( 76.7281, 12.44 )
 z_index = 10
-z_as_relative = false
 _sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
 
 [node name="Timer" type="Timer" parent="UIScaler/CollectedLabel" index="1"]
@@ -178,7 +160,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 6 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="TextureRect" type="TextureRect" parent="UIScaler/Menu" index="0"]
@@ -197,11 +179,11 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 expand = true
 stretch_mode = 0
 
-[node name="OptionsPage" parent="UIScaler/Menu" index="1" instance=ExtResource( 8 )]
+[node name="OptionsPage" parent="UIScaler/Menu" index="1" instance=ExtResource( 9 )]
 
 visible = false
 margin_left = 25.0
@@ -211,6 +193,7 @@ margin_bottom = -2.0
 
 [node name="HBoxContainer" type="VBoxContainer" parent="UIScaler/Menu" index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -238,7 +221,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 144.0
-margin_bottom = 102.0
+margin_bottom = 96.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -246,7 +229,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -271,7 +254,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -297,12 +280,12 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 4 )
 disabled = true
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
-group = SubResource( 4 )
+group = SubResource( 2 )
 text = "Load"
 flat = true
 align = 1
@@ -324,11 +307,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
-group = SubResource( 4 )
+group = SubResource( 2 )
 text = "Options"
 flat = true
 align = 1
@@ -351,11 +334,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
-group = SubResource( 4 )
+group = SubResource( 2 )
 text = "Controls"
 flat = true
 align = 1
@@ -377,11 +360,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
-group = SubResource( 4 )
+group = SubResource( 2 )
 text = "Quit"
 flat = true
 align = 1
@@ -389,6 +372,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="QuitPage" type="Panel" parent="UIScaler/Menu" index="3"]
 
+editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -437,7 +421,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 4 )
 text = "Do you realy want to quit?
 "
 align = 1
@@ -454,7 +438,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 266.0
 margin_top = -325.0
-margin_right = -247.0
+margin_right = -77.0
 margin_bottom = -275.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -479,7 +463,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -496,7 +480,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 61.0
-margin_right = 106.0
+margin_right = 114.0
 margin_bottom = 50.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -505,7 +489,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
