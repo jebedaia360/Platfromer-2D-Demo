@@ -22,7 +22,7 @@ step = 0.1
 
 resource_local_to_scene = true
 
-[node name="GameUI" type="Control" index="0"]
+[node name="GameUI" type="Control"]
 
 pause_mode = 2
 anchor_left = 0.0
