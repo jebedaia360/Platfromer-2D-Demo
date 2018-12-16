@@ -59,7 +59,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Level01" type="Node2D"]
+[node name="Level01" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Material" ]
 __meta__ = {
@@ -540,16 +540,20 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/normal_font = ExtResource( 15 )
 bbcode_enabled = true
-bbcode_text = "[center]This one of the Elevanks.
- You can collect them,
-but now they will not give you anything.[/center]"
+bbcode_text = "[center]
+This one of the Lihts.
+You can collect them,
+but now they will not give you anything.
+[/center]"
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "This one of the Elevanks.
- You can collect them,
-but now they will not give you anything."
+text = "
+This one of the Lihts.
+You can collect them,
+but now they will not give you anything.
+"
 scroll_active = false
 scroll_following = false
 selection_enabled = false
