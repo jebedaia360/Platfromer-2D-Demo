@@ -24,6 +24,7 @@ signal window_size_changed(prev, now)
 signal window_minimized_changed(value)
 signal window_maximized_changed(value)
 signal window_fullscreen_changed(value)
+signal play_bgm(id, value)
 
 func _ready():
 	camera_zoom = default_camera_zoom
@@ -95,6 +96,9 @@ func _process(delta):
 	_prev_window_minimized = OS.window_minimized
 	_prev_window_maximized = OS.window_maximized
 	_prev_window_fullscreen = OS.window_fullscreen
+
+func play_bgm(id, value):
+	emit_signal("play_bgm", id, value)
 
 
 

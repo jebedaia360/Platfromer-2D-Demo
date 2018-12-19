@@ -132,7 +132,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Level01" type="Node2D" index="0"]
+[node name="Level01" type="Node2D"]
 
 _sections_unfolded = [ "Material" ]
 __meta__ = {
@@ -673,10 +673,11 @@ position = Vector2( 3592, -476 )
 stream = ExtResource( 13 )
 volume_db = -10.0
 pitch_scale = 1.0
-autoplay = true
+autoplay = false
 mix_target = 0
 bus = "Music"
 script = ExtResource( 14 )
+id = "Level"
 intro_music = "res://music/Music Intros/Jungle_ruins_theme_intro.ogg"
 music_loop = "res://music/Jungle_ruins_theme.ogg"
 

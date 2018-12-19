@@ -8,6 +8,12 @@ func _ready():
 
 func _on_visibility_changed():
 	get_tree().paused = visible
+	if visible:
+		globals.play_bgm("Menu", true)
+		globals.play_bgm("Level", false)
+	else:
+		globals.play_bgm("Menu", false)
+		globals.play_bgm("Level", true)
 
 func show_page(node):
 	if current_page != null:
