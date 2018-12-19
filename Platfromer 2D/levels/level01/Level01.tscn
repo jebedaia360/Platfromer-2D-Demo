@@ -132,7 +132,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Level01" type="Node2D"]
+[node name="Level01" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Material" ]
 __meta__ = {
@@ -280,7 +280,147 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="2"]
+[node name="CollisionsFixes" type="StaticBody2D" parent="." index="2"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CollisionsFixes" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -480, -64, -480, 0, 512, 0, 512, -64 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CollisionsFixes" index="1"]
+
+position = Vector2( 608, 32 )
+build_mode = 0
+polygon = PoolVector2Array( -96, -64, -96, 0, 480, 0, 480, -64 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="CollisionsFixes" index="2"]
+
+position = Vector2( 1280, -256 )
+build_mode = 0
+polygon = PoolVector2Array( 96, -64, 96, 0, 480, 0, 480, -64 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="CollisionsFixes" index="3"]
+
+position = Vector2( 3136, -128 )
+build_mode = 0
+polygon = PoolVector2Array( 224, -128, 224, 0, 416, 0, 416, -128 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="CollisionsFixes" index="4"]
+
+position = Vector2( 3200, -256 )
+build_mode = 0
+polygon = PoolVector2Array( 224, -64, 224, 0, 352, 0, 352, -64 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="CollisionsFixes" index="5"]
+
+position = Vector2( 3264, -320 )
+build_mode = 0
+polygon = PoolVector2Array( 224, -64, 224, 0, 352, 0, 352, -64 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="CollisionsFixes" index="6"]
+
+position = Vector2( 3328, -384 )
+build_mode = 0
+polygon = PoolVector2Array( 224, -64, 224, 0, 352, 0, 352, -64 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="CollisionsFixes" index="7"]
+
+position = Vector2( 3456, -448 )
+build_mode = 0
+polygon = PoolVector2Array( 224, -64, 224, 0, 352, 0, 352, -64 )
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="CollisionsFixes" index="8"]
+
+position = Vector2( 3520, -512 )
+build_mode = 0
+polygon = PoolVector2Array( 224, -64, 224, 0, 352, 0, 352, -64 )
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="CollisionsFixes" index="9"]
+
+position = Vector2( 3584, -576 )
+build_mode = 0
+polygon = PoolVector2Array( 224, -64, 224, 0, 352, 0, 352, -64 )
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="CollisionsFixes" index="10"]
+
+position = Vector2( 3936, -352 )
+build_mode = 0
+polygon = PoolVector2Array( 224, -64, 224, -32, 416, -32, 416, -64 )
+one_way_collision = true
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="CollisionsFixes" index="11"]
+
+position = Vector2( 5760, -992 )
+build_mode = 0
+polygon = PoolVector2Array( 256, -64, 256, -32, 384, -32, 384, -64 )
+one_way_collision = true
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="CollisionsFixes" index="12"]
+
+position = Vector2( 6400, -416 )
+build_mode = 0
+polygon = PoolVector2Array( 256, -64, 256, -32, 1024, -32, 1024, -64 )
+one_way_collision = true
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="CollisionsFixes" index="13"]
+
+position = Vector2( 6336, -608 )
+build_mode = 0
+polygon = PoolVector2Array( 832, -64, 832, -32, 1024, -32, 1024, -64 )
+one_way_collision = true
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="CollisionsFixes" index="14"]
+
+position = Vector2( 6656, -608 )
+build_mode = 0
+polygon = PoolVector2Array( 896, -64, 896, -32, 1024, -32, 1024, -64 )
+one_way_collision = true
+
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="CollisionsFixes" index="15"]
+
+position = Vector2( 6848, -736 )
+build_mode = 0
+polygon = PoolVector2Array( 896, -64, 896, -32, 1024, -32, 1024, -64 )
+one_way_collision = true
+
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="CollisionsFixes" index="16"]
+
+position = Vector2( 7104, -928 )
+build_mode = 0
+polygon = PoolVector2Array( 896, -64, 896, -32, 1024, -32, 1024, -64 )
+one_way_collision = true
+
+[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="CollisionsFixes" index="17"]
+
+position = Vector2( 7232, -992 )
+build_mode = 0
+polygon = PoolVector2Array( 896, -64, 896, -32, 1024, -32, 1024, -64 )
+one_way_collision = true
+
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="CollisionsFixes" index="18"]
+
+position = Vector2( 7104, -1120 )
+build_mode = 0
+polygon = PoolVector2Array( 896, -64, 896, -32, 1024, -32, 1024, -64 )
+one_way_collision = true
+
+[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="CollisionsFixes" index="19"]
+
+position = Vector2( 7360, -1056 )
+build_mode = 0
+polygon = PoolVector2Array( 896, -64, 896, -32, 1984, -32, 1984, -64 )
+one_way_collision = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="3"]
 
 editor/display_folded = true
 layer = -1
@@ -400,7 +540,7 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Elevators" type="Node2D" parent="." index="3"]
+[node name="Elevators" type="Node2D" parent="." index="4"]
 
 editor/display_folded = true
 
@@ -579,7 +719,7 @@ lookahead = 4.0
 
 modif = 60.0
 
-[node name="Pickups3" type="Node2D" parent="." index="4"]
+[node name="Pickups3" type="Node2D" parent="." index="5"]
 
 editor/display_folded = true
 position = Vector2( -288, -640 )
@@ -600,7 +740,7 @@ position = Vector2( 1796, 232 )
 
 position = Vector2( 2100, 236 )
 
-[node name="Pickups2" type="Node2D" parent="." index="5"]
+[node name="Pickups2" type="Node2D" parent="." index="6"]
 
 editor/display_folded = true
 position = Vector2( 1632, -448 )
@@ -630,7 +770,7 @@ position = Vector2( 980, 152 )
 
 position = Vector2( 888, 152 )
 
-[node name="Pickups" type="Node2D" parent="." index="6"]
+[node name="Pickups" type="Node2D" parent="." index="7"]
 
 editor/display_folded = true
 z_index = -1
@@ -668,7 +808,7 @@ position = Vector2( 6700, -520 )
 
 position = Vector2( 3592, -476 )
 
-[node name="LevelBGMPlayer" type="AudioStreamPlayer" parent="." index="7"]
+[node name="LevelBGMPlayer" type="AudioStreamPlayer" parent="." index="8"]
 
 stream = ExtResource( 13 )
 volume_db = -10.0
@@ -681,7 +821,7 @@ id = "Level"
 intro_music = "res://music/Music Intros/Jungle_ruins_theme_intro.ogg"
 music_loop = "res://music/Jungle_ruins_theme.ogg"
 
-[node name="Labels" type="Control" parent="." index="8"]
+[node name="Labels" type="Control" parent="." index="9"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -700,6 +840,7 @@ _sections_unfolded = [ "Mouse" ]
 
 [node name="AnimatedTitle" type="AnimationPlayer" parent="Labels" index="0"]
 
+editor/display_folded = true
 root_node = NodePath("..")
 autoplay = "fade_title"
 playback_process_mode = 1
