@@ -6,7 +6,7 @@
 [ext_resource path="res://ui/CollectedLabel.gd" type="Script" id=4]
 [ext_resource path="res://entities/Liht/body.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ui/Menu.gd" type="Script" id=6]
-[ext_resource path="res://ui/backgrounds/advisertmen2t.jpeg" type="Texture" id=7]
+[ext_resource path="res://ui/backgrounds/menu.png" type="Texture" id=7]
 [ext_resource path="res://ui/OptionsPage/OptionsPage.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ui/backgrounds/options.jpeg" type="Texture" id=9]
 [ext_resource path="res://ubuntu-font-family/UB22C3.tres" type="DynamicFont" id=10]
@@ -30,7 +30,7 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 resource_local_to_scene = true
 
-[node name="GameUI" type="Control" index="0"]
+[node name="GameUI" type="Control"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -52,8 +52,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_top = -2.0
 margin_right = 1024.0
-margin_bottom = 600.0
+margin_bottom = 598.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -149,7 +150,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 960.0
+margin_left = -3.0
+margin_right = 957.0
 margin_bottom = 536.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -166,8 +168,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_top = -154.0
 margin_right = 1030.0
-margin_bottom = 600.0
+margin_bottom = 737.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -181,22 +184,23 @@ stretch_mode = 0
 [node name="OptionsPage" parent="UIScaler/Menu" index="1" instance=ExtResource( 8 )]
 
 visible = false
-margin_left = -1.0
-margin_top = -4.0
-margin_right = 0.0
-margin_bottom = -1.0
+margin_left = -6.0
+margin_top = -6.0
+margin_right = -146.0
+margin_bottom = -3.0
 
 [node name="QuitPage" type="Panel" parent="UIScaler/Menu" index="2"]
 
-editor/display_folded = true
 visible = false
 self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 134.0
-margin_right = -4.0
+margin_left = 128.0
+margin_top = -210.0
+margin_right = -10.0
+margin_bottom = -210.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -207,6 +211,7 @@ _sections_unfolded = [ "Material", "Visibility" ]
 
 [node name="TextureRect" type="TextureRect" parent="UIScaler/Menu/QuitPage" index="0"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0

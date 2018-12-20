@@ -12,7 +12,8 @@ config_version=3
 
 config/name="Platformer 2D v0.15"
 run/main_scene="res://ui/GameUI.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://ui/backgrounds/boot_logo.png"
+config/icon="res://ui/backgrounds/boot_logo.png"
 
 [autoload]
 

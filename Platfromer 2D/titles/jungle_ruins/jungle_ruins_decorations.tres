@@ -1,7 +1,6 @@
-[gd_resource type="TileSet" load_steps=3 format=2]
+[gd_resource type="TileSet" load_steps=2 format=2]
 
 [ext_resource path="res://titles/jungle_ruins/jungle_ruins.png" type="Texture" id=1]
-[ext_resource path="res://titles/jungle_ruins/palm_tree.png" type="Texture" id=2]
 
 [resource]
 
@@ -140,31 +139,4 @@
 14/occluder_offset = Vector2( 0, 0 )
 14/navigation_offset = Vector2( 0, 0 )
 14/shapes = [  ]
-15/name = "15"
-15/texture = ExtResource( 2 )
-15/tex_offset = Vector2( 0, 0 )
-15/modulate = Color( 1, 1, 1, 1 )
-15/region = Rect2( 0, 0, 128, 128 )
-15/is_autotile = false
-15/occluder_offset = Vector2( 0, 0 )
-15/navigation_offset = Vector2( 0, 0 )
-15/shapes = [  ]
-16/name = "16"
-16/texture = ExtResource( 2 )
-16/tex_offset = Vector2( 0, 0 )
-16/modulate = Color( 1, 1, 1, 1 )
-16/region = Rect2( 128, 0, 128, 128 )
-16/is_autotile = false
-16/occluder_offset = Vector2( 0, 0 )
-16/navigation_offset = Vector2( 0, 0 )
-16/shapes = [  ]
-17/name = "17"
-17/texture = ExtResource( 2 )
-17/tex_offset = Vector2( 0, 0 )
-17/modulate = Color( 1, 1, 1, 1 )
-17/region = Rect2( 0, 128, 128, 128 )
-17/is_autotile = false
-17/occluder_offset = Vector2( 0, 0 )
-17/navigation_offset = Vector2( 0, 0 )
-17/shapes = [  ]
 
