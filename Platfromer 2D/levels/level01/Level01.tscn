@@ -146,7 +146,7 @@ gravity_scale = 4.0
 
 [node name="Tiles" type="Node2D" parent="." index="1"]
 
-[node name="FrontDecrations" type="TileMap" parent="Tiles" index="0"]
+[node name="FrontDec64" type="TileMap" parent="Tiles" index="0"]
 
 position = Vector2( 64, 64 )
 z_index = 10
@@ -166,7 +166,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -655302, -1073741811, 0, -655256, 1610612742, 0, -655254, 1610612741, 0, -655252, 1610612742, 0, -655250, 1610612741, 0, -589721, 1610612743, 0, -458726, 2, 0, -458724, 2, 0, -458722, 2, 0, -458720, 2, 0, -458718, 2, 0, -458716, 2, 0, -458714, 2, 0, -458712, 2, 0, -458710, 2, 0, -458708, 3, 0, -393176, -1073741811, 0, -393164, -1073741811, 0, -327659, 14, 0, -327653, 13, 0, -327642, 14, 0, -327631, 12, 0, -196594, 8, 0, -196593, 8, 0, -196592, 9, 0, -196573, 12, 0, -65522, 10, 0, -65520, 11, 0, 65576, 13, 0 )
+tile_data = PoolIntArray( -655302, -1073741811, 0, -655256, 1610612742, 0, -655254, 1610612741, 0, -655252, 1610612742, 0, -655250, 1610612741, 0, -589721, 1610612743, 0, -393225, 536870928, 0, -393223, 536870927, 0, -393218, 536870928, 0, -458752, 536870927, 0, -458726, 2, 0, -458724, 2, 0, -458722, 2, 0, -458720, 2, 0, -458718, 2, 0, -458716, 2, 0, -458714, 2, 0, -458712, 2, 0, -458710, 2, 0, -458708, 3, 0, -393176, -1073741811, 0, -393164, -1073741811, 0, -262151, 536870929, 0, -327680, 536870929, 0, -327659, 14, 0, -327653, 13, 0, -327642, 14, 0, -327631, 12, 0, -131080, 17, 0, -131073, 17, 0, -196594, 8, 0, -196593, 8, 0, -196592, 9, 0, -196573, 12, 0, -65522, 10, 0, -65520, 11, 0, 65576, 13, 0 )
 _sections_unfolded = [ "Cell", "Collision", "Transform", "Z Index" ]
 __meta__ = {
 "_edit_lock_": true
@@ -251,7 +251,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="BackDecrations" type="TileMap" parent="Tiles" index="4"]
+[node name="BackDec128" type="TileMap" parent="Tiles" index="4"]
 
 modulate = Color( 0.664062, 0.664062, 0.664062, 1 )
 position = Vector2( 64, 64 )
@@ -278,8 +278,36 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="BackDec64" type="TileMap" parent="Tiles" index="5"]
+
+modulate = Color( 0.664062, 0.664062, 0.664062, 1 )
+position = Vector2( 64, 64 )
+z_index = -12
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -786443, 15, 0, -786441, 536870928, 0, -786439, 16, 0, -786437, 536870927, 0, -655362, 536870928, 0, -720894, 536870927, 0, -589839, 536870928, 0, -589835, 536870927, 0, -524299, 17, 0, -524293, 536870929, 0, -393227, 536870929, 0, -458750, 536870929, 0, -262154, 536870930, 0, -262150, 18, 0, -327651, -1073741811, 0, -262125, 12, 0, -196585, 12, 0, -196582, -1073741811, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Transform", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="CollisionsFixes" type="StaticBody2D" parent="." index="2"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1

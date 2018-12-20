@@ -166,4 +166,31 @@ region_enabled = true
 region_rect = Rect2( 0, 128, 128, 128 )
 _sections_unfolded = [ "Region" ]
 
+[node name="18" type="Sprite" parent="." index="18"]
+
+position = Vector2( 352, 480 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 128, 128, 128 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="19" type="Sprite" parent="." index="19"]
+
+position = Vector2( 384, 352 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 64, 0, 128, 128 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="20" type="Sprite" parent="." index="20"]
+
+position = Vector2( 256, 352 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( -64, 0, 128, 128 )
+_sections_unfolded = [ "Offset", "Region" ]
+
 
