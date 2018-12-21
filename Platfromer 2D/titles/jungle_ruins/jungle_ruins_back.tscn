@@ -68,7 +68,7 @@ position = Vector2( 128, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 384, 192, 64, 64 )
+region_rect = Rect2( 384, 192, 64, 68 )
 _sections_unfolded = [ "Offset", "Region" ]
 __meta__ = {
 "_edit_group_": true
