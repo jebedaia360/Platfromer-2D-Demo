@@ -146,6 +146,8 @@ gravity_scale = 4.0
 
 [node name="Tiles" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
+
 [node name="FrontDec64" type="TileMap" parent="Tiles" index="0"]
 
 position = Vector2( 64, 64 )
@@ -450,84 +452,84 @@ one_way_collision = true
 position = Vector2( 1129, 164.35 )
 scale = Vector2( 14.0357, 21.125 )
 build_mode = 0
-polygon = PoolVector2Array( -2, -5, 4.20959, -7.96923, 4.13834, -4.79763, 2.08784, -4.86523 )
+polygon = PoolVector2Array( -5.20103, -7.77988, 3.91858, -7.77988, 3.91858, -4.7503, -5.20103, -4.7503 )
 
 [node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="CollisionsFixes" index="21"]
 
 position = Vector2( 1189, 228.35 )
 scale = Vector2( 14.0357, 21.125 )
 build_mode = 0
-polygon = PoolVector2Array( -5.62249, -7.87456, 4.20959, -7.96923, 4.13834, -4.79763, 2.08784, -4.86523 )
+polygon = PoolVector2Array( -4.91604, -7.77988, 4.20357, -7.77988, 4.20357, -4.7503, -4.91604, -4.7503 )
 
 [node name="CollisionPolygon2D23" type="CollisionPolygon2D" parent="CollisionsFixes" index="22"]
 
 position = Vector2( 1254, 297.35 )
 scale = Vector2( 14.0357, 21.125 )
 build_mode = 0
-polygon = PoolVector2Array( -5.62249, -7.87456, 4.20959, -7.96923, 4.13834, -4.79763, 2.08784, -4.86523 )
+polygon = PoolVector2Array( -4.98728, -8.01657, 4.13232, -8.01657, 4.13232, -4.98698, -4.98728, -4.98698 )
 
 [node name="CollisionPolygon2D24" type="CollisionPolygon2D" parent="CollisionsFixes" index="23"]
 
 position = Vector2( 1320, 358.35 )
 scale = Vector2( 14.0357, 21.125 )
 build_mode = 0
-polygon = PoolVector2Array( -5.62249, -7.87456, 4.20959, -7.96923, 4.13834, -4.79763, 2.08784, -4.86523 )
+polygon = PoolVector2Array( -5.12978, -7.87456, 3.98982, -7.87456, 3.98982, -4.84497, -5.12978, -4.84497 )
 
 [node name="CollisionPolygon2D25" type="CollisionPolygon2D" parent="CollisionsFixes" index="24"]
 
 position = Vector2( 1768, 297.35 )
 scale = Vector2( 14.0357, 21.125 )
 build_mode = 0
-polygon = PoolVector2Array( 1.59785, -7.96567, 4.20959, -7.96923, 4.13834, -4.79763, 1.52661, -4.84141 )
+polygon = PoolVector2Array( 1.70992, -8.01657, 3.98982, -8.01657, 3.98982, -4.98698, 1.70992, -4.98698 )
 
 [node name="CollisionPolygon2D26" type="CollisionPolygon2D" parent="CollisionsFixes" index="25"]
 
 position = Vector2( 1418, 360.35 )
 scale = Vector2( 14.0357, 21.125 )
 build_mode = 0
-polygon = PoolVector2Array( 1.59785, -7.96567, 4.20959, -7.96923, 4.13834, -4.79763, 1.52661, -4.84141 )
+polygon = PoolVector2Array( 1.56744, -7.96923, 3.84734, -7.96923, 3.84734, -4.93965, 1.56744, -4.93965 )
 
 [node name="CollisionPolygon2D27" type="CollisionPolygon2D" parent="CollisionsFixes" index="26"]
 
 position = Vector2( 1477, 295.35 )
 scale = Vector2( 14.0357, 21.125 )
 build_mode = 0
-polygon = PoolVector2Array( 1.59785, -7.96567, 4.20959, -7.96923, 4.13834, -4.79763, 1.52661, -4.84141 )
+polygon = PoolVector2Array( 1.92367, -7.92189, 4.20357, -7.92189, 4.20357, -4.89231, 1.92367, -4.89231 )
 
 [node name="CollisionPolygon2D28" type="CollisionPolygon2D" parent="CollisionsFixes" index="27"]
 
 position = Vector2( 1959, 361.35 )
 scale = Vector2( 14.0357, 21.125 )
 build_mode = 0
-polygon = PoolVector2Array( 1.59785, -7.96567, 4.20959, -7.96923, 4.13834, -4.79763, 1.52661, -4.84141 )
+polygon = PoolVector2Array( 1.78117, -8.01657, 4.06107, -8.01657, 4.06107, -4.98698, 1.78117, -4.98698 )
 
 [node name="CollisionPolygon2D29" type="CollisionPolygon2D" parent="CollisionsFixes" index="28"]
 
-position = Vector2( 2117, 360.35 )
+position = Vector2( 2112, 352 )
 scale = Vector2( 14.0357, 21.125 )
 build_mode = 0
-polygon = PoolVector2Array( 1.59785, -7.96567, 4.20959, -7.96923, 4.13834, -4.79763, 1.52661, -4.84141, 1.52252, -5.93016 )
+polygon = PoolVector2Array( 2.27991, -7.57396, 4.5598, -7.57396, 4.5598, -4.54438, 2.27991, -4.54438 )
 
 [node name="CollisionPolygon2D30" type="CollisionPolygon2D" parent="CollisionsFixes" index="29"]
 
 position = Vector2( 2184, 297.35 )
 scale = Vector2( 14.0357, 21.125 )
 build_mode = 0
-polygon = PoolVector2Array( 1.59785, -7.96567, 4.20959, -7.96923, 4.13834, -4.79763, 1.52661, -4.84141, 1.52252, -5.93016 )
+polygon = PoolVector2Array( 1.70993, -8.01657, 3.98982, -8.01657, 3.98982, -4.98698, 1.70993, -4.98698 )
 
 [node name="CollisionPolygon2D31" type="CollisionPolygon2D" parent="CollisionsFixes" index="30"]
 
 position = Vector2( 2250, 232.35 )
 scale = Vector2( 14.0357, 21.125 )
 build_mode = 0
-polygon = PoolVector2Array( 1.59785, -7.96567, 4.20959, -7.96923, 4.13834, -4.79763, 1.52661, -4.84141, 1.52252, -5.93016 )
+polygon = PoolVector2Array( 1.56743, -7.96923, 3.84732, -7.96923, 3.84732, -4.93965, 1.56743, -4.93965 )
 
 [node name="CollisionPolygon2D32" type="CollisionPolygon2D" parent="CollisionsFixes" index="31"]
 
 position = Vector2( 2312, 166.35 )
 scale = Vector2( 14.0357, 21.125 )
 build_mode = 0
-polygon = PoolVector2Array( 1.59785, -7.96567, 4.20959, -7.96923, 4.13834, -4.79763, 1.52661, -4.84141, 1.52252, -5.93016 )
+polygon = PoolVector2Array( 1.70993, -7.87456, 3.98984, -7.87456, 3.98984, -4.84497, 1.70993, -4.84497 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="3"]
 
