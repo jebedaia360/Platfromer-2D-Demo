@@ -19,5 +19,9 @@ func _on_visibility_changed():
 		current_choice_id = 2
 	else:
 		current_choice_id = 0
-		
+	
 	update_label()
+
+func update_label(choice = options_list[current_choice_id]):
+	.update_label(choice)
+	globals.temp_window_type_id = current_choice_id

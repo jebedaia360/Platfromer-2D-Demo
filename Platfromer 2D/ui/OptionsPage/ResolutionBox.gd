@@ -1,7 +1,5 @@
 extends "CollapsedList.gd"
 
-var resolution = Vector2()
-
 func _ready():
 	connect("visibility_changed", self, "_on_visibility_changed")
 	## taken from https://freegamedev.net/wiki/Screen_Resolutions
@@ -29,4 +27,5 @@ func update_label(size = options_list[current_choice_id]):
 	$HBox/Label.text = str(size.x) + "x" + str(size.y)
 	if not (size in options_list):
 		options_list.append(size)
-	resolution = size
+
+	globals.temp_window_size = size

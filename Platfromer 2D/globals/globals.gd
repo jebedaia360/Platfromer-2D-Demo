@@ -18,6 +18,11 @@ var window_minimized setget _set_window_minimized, _get_window_minimized
 var window_maximized setget _set_window_maximized, _get_window_maximized
 var window_fullscreen setget _set_window_fullscreen, _get_window_fullscreen
 
+## vars used by settings window
+var temp_window_type_id = 0
+var temp_vsync_enabled = true
+var temp_window_size = Vector2(1024, 600)
+
 signal collected_changed
 signal camera_zoom_changed
 signal window_size_changed(prev, now)

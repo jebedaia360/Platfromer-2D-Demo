@@ -31,7 +31,7 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 resource_local_to_scene = true
 
-[node name="GameUI" type="Control"]
+[node name="GameUI" type="Control" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
