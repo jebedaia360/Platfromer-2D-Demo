@@ -6,7 +6,7 @@ func _ready():
 	$OnButton.connect("pressed", self, "_on_toggle", [true])
 
 func _on_toggle(value):
-	globals.temp_vsync_enabled = value
+	settings.temp_vsync_enabled = value
 
 func _on_visibility_changed():
 	if OS.vsync_enabled:

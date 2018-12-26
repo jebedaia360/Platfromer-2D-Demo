@@ -28,4 +28,4 @@ func update_label(size = options_list[current_choice_id]):
 	if not (size in options_list):
 		options_list.append(size)
 
-	globals.temp_window_size = size
+	settings.temp_window_size = size

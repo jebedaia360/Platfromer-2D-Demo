@@ -24,4 +24,4 @@ func _on_visibility_changed():
 
 func update_label(choice = options_list[current_choice_id]):
 	.update_label(choice)
-	globals.temp_window_type_id = current_choice_id
+	settings.temp_window_type_id = current_choice_id
