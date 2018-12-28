@@ -1,11 +1,24 @@
-# godot-tuts-pl
-Repozytorium z kodem i grafikami omawiany w moich tutorialach Godot.
+# Rigo's Adventure Demo
 
-Od grudnia 2018 projektem zajmuje się [Chaha Studio](https://masterpolska.pl.tl/Chaha-Studios.htm)
+## ENG:
+Originally it was just a repository with the code and graphics discussed in my Godot tutorials,
+however, since December 2018 the project has been done by [Chaha Studio] (https://masterpolska.pl.tl/Chaha-Studios.htm),
+and on December 28, the repository became a repository only for the Rigo's Adventure Demo project.
 
-[Licencja MIT](https://www.wikiwand.com/pl/Licencja_MIT) - grafik i kodu możesz używać jak chesz w swoich projektach :D ,
+[MIT License] (https://www.wikiwand.com/pl/Licencja_MIT) - you can use the code as you like in your projects: D,
+graphics, music and sounds also from (with acknowledgment of authorship) - [CC-BY License] (https://creativecommons.org/licenses/by/4.0/).
 
-było by miło jak bym był w creditsach - nie wymagane.
+Youtube channel with (Polish) tutorials: https://www.youtube.com/channel/UCMGyApWbhZCBnsEn2SI4ovA
+
+My discord: https://discord.gg/K9gvjdg
+
+## PL:
+Pierwotnie było to tylko repozytorium z kodem i grafikami omawiany w moich tutorialach Godot,
+jednak od grudnia 2018 projektem zajmuje się [Chaha Studio](https://masterpolska.pl.tl/Chaha-Studios.htm),
+a 28. grudnia repozytoruim stało się repozytorium tylko dla projektu Rigo's Adventure Demo.
+
+[Licencja MIT](https://www.wikiwand.com/pl/Licencja_MIT) - kodu możesz używać jak chesz w swoich projektach :D ,
+grafki, muzyki i dźwięków również z (z uznamiem autorstwa) - [Licencja CC-BY](https://creativecommons.org/licenses/by/4.0/).
 
 Kanał na youtube z tutorialami: https://www.youtube.com/channel/UCMGyApWbhZCBnsEn2SI4ovA
 

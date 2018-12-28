@@ -1,3 +1,4 @@
 *.import
 *.zip
-Platfromer02/hero/AnimRef.png
+*.vscode
+hero/sprites/AnimRef.png
