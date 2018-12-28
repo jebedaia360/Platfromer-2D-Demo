@@ -2,11 +2,11 @@
 
 ## ENG:
 Originally it was just a repository with the code and graphics discussed in my Godot tutorials,
-however, since December 2018 the project has been done by [Chaha Studio] (https://masterpolska.pl.tl/Chaha-Studios.htm),
+however, since December 2018 the project has been done by [Chaha Studio](https://masterpolska.pl.tl/Chaha-Studios.htm),
 and on December 28, the repository became a repository only for the Rigo's Adventure Demo project.
 
-[MIT License] (https://www.wikiwand.com/pl/Licencja_MIT) - you can use the code as you like in your projects: D,
-graphics, music and sounds also from (with acknowledgment of authorship) - [CC-BY License] (https://creativecommons.org/licenses/by/4.0/).
+[MIT License](https://www.wikiwand.com/pl/Licencja_MIT) - you can use the code as you like in your projects: D,
+graphics, music and sounds also from (with acknowledgment of authorship) - [CC-BY License](https://creativecommons.org/licenses/by/4.0/).
 
 Youtube channel with (Polish) tutorials: https://www.youtube.com/channel/UCMGyApWbhZCBnsEn2SI4ovA
 
