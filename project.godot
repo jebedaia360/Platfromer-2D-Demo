@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Platformer 2D v0.17"
+config/name="Rigo's Adventure Demo 0.18"
 run/main_scene="res://ui/GameUI.tscn"
 boot_splash/image="res://ui/minei.png"
 config/icon="res://ui/minei.png"
