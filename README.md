@@ -2,7 +2,7 @@
 
 ## ENG:
 Originally it was just a repository with the code and graphics discussed in my Godot tutorials,
-however, since December 2018 the project has been done by [Chaha Studio](https://masterpolska.pl.tl/Chaha-Studios.htm),
+however, since December 2018 the project has been done by [Chaha Studio](https://karoltomaszewskimu.wixsite.com/chahastudiosgames/platformer-2d),
 and on December 28, the repository became a repository only for the Rigo's Adventure Demo project.
 
 [MIT License](https://www.wikiwand.com/pl/Licencja_MIT) - you can use the code as you like in your projects: D,
@@ -14,7 +14,7 @@ My discord: https://discord.gg/K9gvjdg
 
 ## PL:
 Pierwotnie było to tylko repozytorium z kodem i grafikami omawiany w moich tutorialach Godot,
-jednak od grudnia 2018 projektem zajmuje się [Chaha Studio](https://masterpolska.pl.tl/Chaha-Studios.htm),
+jednak od grudnia 2018 projektem zajmuje się [Chaha Studio](https://karoltomaszewskimu.wixsite.com/chahastudiosgames/platformer-2d),
 a 28. grudnia repozytoruim stało się repozytorium tylko dla projektu Rigo's Adventure Demo.
 
 [Licencja MIT](https://www.wikiwand.com/pl/Licencja_MIT) - kodu możesz używać jak chesz w swoich projektach :D ,
