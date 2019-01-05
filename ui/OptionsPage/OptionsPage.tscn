@@ -1,12 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://ui/backgrounds/options.jpeg" type="Texture" id=1]
-[ext_resource path="res://ubuntu-font-family/UB22C3.tres" type="DynamicFont" id=2]
-[ext_resource path="res://ui/OptionsPage/GraphicsBox.gd" type="Script" id=3]
-[ext_resource path="res://ui/OptionsPage/WindowBox.gd" type="Script" id=4]
-[ext_resource path="res://ui/OptionsPage/ResolutionBox.gd" type="Script" id=5]
-[ext_resource path="res://ui/OptionsPage/VSyncBox.gd" type="Script" id=6]
-[ext_resource path="res://ui/OptionsPage/MusicBox.gd" type="Script" id=7]
+[ext_resource path="res://ubuntu-font-family/UB22C3.tres" type="DynamicFont" id=1]
+[ext_resource path="res://ui/OptionsPage/GraphicsBox.gd" type="Script" id=2]
+[ext_resource path="res://ui/OptionsPage/WindowBox.gd" type="Script" id=3]
+[ext_resource path="res://ui/OptionsPage/ResolutionBox.gd" type="Script" id=4]
+[ext_resource path="res://ui/OptionsPage/VSyncBox.gd" type="Script" id=5]
+[ext_resource path="res://ui/OptionsPage/MusicBox.gd" type="Script" id=6]
 
 [sub_resource type="ButtonGroup" id=1]
 
@@ -24,7 +23,7 @@ resource_local_to_scene = true
 
 resource_local_to_scene = true
 
-[node name="OptionsPage" type="Panel"]
+[node name="OptionsPage" type="Panel" index="0"]
 
 self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
@@ -41,26 +40,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 _sections_unfolded = [ "Size Flags", "Theme", "Visibility", "custom_styles" ]
 
-[node name="TextureRect" type="TextureRect" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -152.0
-margin_right = 1328.0
-margin_bottom = 598.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="." index="1"]
+[node name="Label" type="Label" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -76,7 +56,8 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 text = "Options"
 align = 1
 valign = 1
@@ -85,7 +66,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." index="2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -121,7 +102,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 10
 alignment = 0
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="Label" type="Label" parent="HBoxContainer/GraphicsBox" index="0"]
@@ -138,7 +119,8 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 text = "Graphics"
 align = 1
 valign = 1
@@ -149,7 +131,6 @@ _sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
 [node name="WindowBox" type="VBoxContainer" parent="HBoxContainer/GraphicsBox" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -164,7 +145,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 0
-script = ExtResource( 4 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
 [node name="Label" type="Label" parent="HBoxContainer/GraphicsBox/WindowBox" index="0"]
@@ -181,7 +162,8 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 text = "Window Type"
 align = 1
 valign = 1
@@ -223,7 +205,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -248,7 +231,8 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 text = "Window Type"
 align = 1
 valign = 1
@@ -273,7 +257,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -285,7 +270,6 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="ResolutionBox" type="VBoxContainer" parent="HBoxContainer/GraphicsBox" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -300,7 +284,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 0
-script = ExtResource( 5 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Size Flags" ]
 
 [node name="Label" type="Label" parent="HBoxContainer/GraphicsBox/ResolutionBox" index="0"]
@@ -317,7 +301,8 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 text = "Resolution"
 align = 1
 valign = 1
@@ -359,7 +344,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -384,7 +370,8 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 text = "Resolution"
 align = 1
 valign = 1
@@ -409,7 +396,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -436,7 +424,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 0
-script = ExtResource( 6 )
+script = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="HBoxContainer/GraphicsBox/VSyncBox" index="0"]
 
@@ -452,7 +440,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 text = "VSync"
 align = 1
 valign = 1
@@ -477,7 +465,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -503,7 +491,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -529,7 +517,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -555,7 +544,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 0
-script = ExtResource( 7 )
+script = ExtResource( 6 )
 _sections_unfolded = [ "Size Flags" ]
 
 [node name="Label" type="Label" parent="HBoxContainer/MusicBox" index="0"]
@@ -572,7 +561,8 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 text = "Music"
 align = 1
 valign = 1
@@ -612,7 +602,8 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 text = "Volume"
 align = 1
 valign = 1
@@ -637,7 +628,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -663,7 +655,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -734,7 +727,8 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 text = "Background"
 align = 1
 valign = 1
@@ -759,7 +753,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -785,7 +780,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -854,7 +850,8 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 text = "SFX"
 align = 1
 valign = 1
@@ -879,7 +876,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -905,7 +903,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null

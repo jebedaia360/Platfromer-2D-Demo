@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://ui/LevelViewport.gd" type="Script" id=1]
 [ext_resource path="res://levels/level01/Level01.tscn" type="PackedScene" id=2]
@@ -6,12 +6,11 @@
 [ext_resource path="res://ui/CollectedLabel.gd" type="Script" id=4]
 [ext_resource path="res://entities/Liht/body.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ui/Menu.gd" type="Script" id=6]
-[ext_resource path="res://ui/backgrounds/logo.png" type="Texture" id=7]
+[ext_resource path="res://ui/menu.png" type="Texture" id=7]
 [ext_resource path="res://ui/OptionsPage/OptionsPage.tscn" type="PackedScene" id=8]
-[ext_resource path="res://ui/backgrounds/options.jpeg" type="Texture" id=9]
-[ext_resource path="res://ubuntu-font-family/UB22C3.tres" type="DynamicFont" id=10]
-[ext_resource path="res://music/Mr_Yesterday_-_Black_Ice.ogg" type="AudioStream" id=11]
-[ext_resource path="res://globals/LevelBGMPlayer.gd" type="Script" id=12]
+[ext_resource path="res://ubuntu-font-family/UB22C3.tres" type="DynamicFont" id=9]
+[ext_resource path="res://music/Mr_Yesterday_-_Black_Ice.ogg" type="AudioStream" id=10]
+[ext_resource path="res://globals/LevelBGMPlayer.gd" type="Script" id=11]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -166,10 +165,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -50.0
-margin_top = -174.0
-margin_right = 1030.0
-margin_bottom = 796.0
+margin_left = 3.0
+margin_right = 1028.0
+margin_bottom = 606.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -190,16 +188,17 @@ margin_bottom = -1.0
 
 [node name="QuitPage" type="Panel" parent="UIScaler/Menu" index="2"]
 
+editor/display_folded = true
 visible = false
 self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 124.0
-margin_top = -180.0
-margin_right = -14.0
-margin_bottom = -180.0
+margin_left = 136.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = 2.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -208,27 +207,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Material", "Visibility" ]
 
-[node name="TextureRect" type="TextureRect" parent="UIScaler/Menu/QuitPage" index="0"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -134.0
-margin_right = 873.0
-margin_bottom = 600.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 9 )
-expand = true
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="UIScaler/Menu/QuitPage" index="1"]
+[node name="Label" type="Label" parent="UIScaler/Menu/QuitPage" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.5
@@ -244,16 +223,17 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 text = "Do you really want to quit?
 "
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UIScaler/Menu/QuitPage" index="2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UIScaler/Menu/QuitPage" index="1"]
 
 anchor_left = 0.0
 anchor_top = 1.0
@@ -286,7 +266,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -294,7 +275,7 @@ group = null
 text = "Yes"
 flat = true
 align = 1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="No" type="Button" parent="UIScaler/Menu/QuitPage/HBoxContainer" index="1"]
 
@@ -312,7 +293,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -324,6 +306,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="HBoxContainer" type="VBoxContainer" parent="UIScaler/Menu" index="3"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -359,7 +342,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -384,7 +368,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -411,7 +396,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -437,7 +423,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -464,7 +451,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -490,7 +478,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.417969, 0.160004, 0.160004, 1 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -502,13 +491,13 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="BGMPlayer" type="AudioStreamPlayer" parent="UIScaler/Menu" index="4"]
 
-stream = ExtResource( 11 )
+stream = ExtResource( 10 )
 volume_db = -10.0
 pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Music"
-script = ExtResource( 12 )
+script = ExtResource( 11 )
 id = "Menu"
 
 [connection signal="pressed" from="UIScaler/Menu/QuitPage/HBoxContainer/Yes" to="UIScaler/Menu" method="_on_Yes_pressed"]
