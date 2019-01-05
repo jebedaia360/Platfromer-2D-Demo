@@ -12,7 +12,7 @@
 [ext_resource path="res://globals/AnimPlayer.gd" type="Script" id=10]
 [ext_resource path="res://levels/level01/Elevator.tscn" type="PackedScene" id=11]
 [ext_resource path="res://entities/Liht/liht.tscn" type="PackedScene" id=12]
-[ext_resource path="res://music/Menu_music.ogg" type="AudioStream" id=13]
+[ext_resource path="res://music/doxent_-_Forgotten_Land.ogg" type="AudioStream" id=13]
 [ext_resource path="res://globals/LevelBGMPlayer.gd" type="Script" id=14]
 [ext_resource path="res://ubuntu-font-family/UMB64C3.tres" type="DynamicFont" id=15]
 [ext_resource path="res://ubuntu-font-family/UMB14C3.tres" type="DynamicFont" id=16]
@@ -837,7 +837,6 @@ modif = 60.0
 
 [node name="Pickups3" type="Node2D" parent="." index="5"]
 
-editor/display_folded = true
 position = Vector2( -288, -640 )
 
 [node name="liht13" parent="Pickups3" index="0" instance=ExtResource( 12 )]
@@ -934,8 +933,6 @@ mix_target = 0
 bus = "Music"
 script = ExtResource( 14 )
 id = "Level"
-intro_music = "res://music/Music Intros/Jungle_ruins_theme_intro.ogg"
-music_loop = "res://music/Jungle_ruins_theme.ogg"
 
 [node name="Labels" type="Control" parent="." index="9"]
 

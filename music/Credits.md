@@ -1,3 +1,5 @@
-# Music Tracks are download from dig.ccmixter.org:
+# Music Tracks are from dig.ccmixter.org:
 
-- First level background music: [*Welcome in the intox*](http://dig.ccmixter.org/files/Bluemillenium/57202) by [Bluemillenium](http://dig.ccmixter.org/people/Bluemillenium)
+- <div class="attribution-block"><a href="http://dig.ccmixter.org/files/Mr_Yesterday/58884">Black Ice</a> by Mr_Yesterday (c) copyright 2018 Licensed under a Creative Commons <a href="http://creativecommons.org/licenses/by/3.0/">Attribution (3.0)</a> license. Ft: reusenoise</div>
+- <div class="attribution-block"><a href="http://dig.ccmixter.org/files/doxent/45486">Forgotten Land</a> by Doxent Zsigmond (c) copyright 2014 Licensed under a Creative Commons <a href="http://creativecommons.org/licenses/by/3.0/">Attribution (3.0)</a> license. Ft: Gurdonark, Joanne Gabriel</div>
+- <div class="attribution-block"><a href="http://dig.ccmixter.org/files/Mr_Pepino/56215">Quiet The Mind Instrumental</a> by Mr. Pepino (c) copyright 2017 Licensed under a Creative Commons <a href="http://creativecommons.org/licenses/by/3.0/">Attribution (3.0)</a> license. </div>

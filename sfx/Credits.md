@@ -1,6 +1,5 @@
 # SFX:
-- collect elevenek:
-	[*Lum Sounddd*]() by Maciej Biernacki (my brother) on Creative Commons By License.
+- collect elevenek: [*Lum Sounddd*](sfx/lum sounddd.wav) by Maciej Biernacki (my brother) on Creative Commons By License.
 
 - jump: [*cartoon jump.wav*](https://freesound.org/people/elektroproleter/sounds/157569/) by [*elektroproleter*](https://freesound.org/people/elektroproleter/) on Creative Commons 0 License.
 
