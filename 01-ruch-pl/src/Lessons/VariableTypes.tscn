@@ -66,6 +66,10 @@ text = "var nazwa_zmiennej : typ = wartość"
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
+class_color = Color( 0.6, 0.6, 1, 1 )
+member_color = Color( 0.6, 1, 0.6, 1 )
+keyword_color = Color( 1, 0.6, 0.6, 1 )
+quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="HSeparator2" type="HSeparator" parent="BodyPanel/Column/Column"]
@@ -98,6 +102,10 @@ var character_name : String = \"Godette\""
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
+class_color = Color( 0.6, 0.6, 1, 1 )
+member_color = Color( 0.6, 1, 0.6, 1 )
+keyword_color = Color( 1, 0.6, 0.6, 1 )
+quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="BodyPanel/Column/Column"]
@@ -122,6 +130,10 @@ var body : Sprite"
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
+class_color = Color( 0.6, 0.6, 1, 1 )
+member_color = Color( 0.6, 1, 0.6, 1 )
+keyword_color = Color( 1, 0.6, 0.6, 1 )
+quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="HSeparator" type="HSeparator" parent="BodyPanel/Column/Column"]
@@ -133,7 +145,7 @@ margin_bottom = 530.0
 margin_top = 538.0
 margin_right = 1282.0
 margin_bottom = 564.0
-text = "Nie możemy przypisać wartości innego typu do zmiennej po jej zdefiniowaniu:"
+text = "Nie możemy przypisać wartości innego typu do zmiennej po jej zdefiniowaniu, jeśli określiliśmy jej typ:"
 autowrap = true
 
 [node name="TextEdit4" parent="BodyPanel/Column/Column" instance=ExtResource( 3 )]
@@ -148,6 +160,10 @@ max_health = \"Maximum\" # To spowoduje błąd"
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
+class_color = Color( 0.6, 0.6, 1, 1 )
+member_color = Color( 0.6, 1, 0.6, 1 )
+keyword_color = Color( 1, 0.6, 0.6, 1 )
+quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="NotesPanel" type="Panel" parent="."]

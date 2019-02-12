@@ -26,71 +26,8 @@ drag_margin_v_enabled = false
 smoothing_enabled = true
 
 [node name="Variables" parent="." instance=ExtResource( 2 )]
-editor/display_folded = true
 margin_right = 1309.0
 margin_bottom = 799.0
-
-[node name="BodyPanel" parent="Variables" index="0"]
-margin_right = 813.0
-margin_bottom = 799.0
-
-[node name="Column" parent="Variables/BodyPanel/Column" index="0"]
-margin_right = 763.0
-margin_bottom = 462.0
-
-[node name="Title" parent="Variables/BodyPanel/Column/Column" index="0"]
-margin_right = 763.0
-text = "1. 1. 1. 1. 1. 1. 1. 1. 1. Zmienne"
-
-[node name="RichTextLabel" parent="Variables/BodyPanel/Column/Column" index="1"]
-margin_right = 763.0
-margin_bottom = 243.0
-
-[node name="TextEdit" parent="Variables/BodyPanel/Column/Column" index="2"]
-margin_top = 251.0
-margin_right = 763.0
-margin_bottom = 450.0
-
-[node name="HSeparator" parent="Variables/BodyPanel/Column/Column" index="3"]
-margin_top = 458.0
-margin_right = 763.0
-margin_bottom = 462.0
-
-[node name="Column2" parent="Variables/BodyPanel/Column" index="1"]
-margin_top = 470.0
-margin_right = 763.0
-margin_bottom = 759.0
-
-[node name="Label" parent="Variables/BodyPanel/Column/Column2" index="0"]
-margin_right = 763.0
-margin_bottom = 55.0
-
-[node name="TextEdit2" parent="Variables/BodyPanel/Column/Column2" index="1"]
-margin_top = 63.0
-margin_right = 763.0
-margin_bottom = 163.0
-
-[node name="Label2" parent="Variables/BodyPanel/Column/Column2" index="2"]
-margin_top = 171.0
-margin_right = 763.0
-margin_bottom = 289.0
-
-[node name="NotesPanel" parent="Variables" index="1"]
-margin_left = 821.0
-margin_right = 1309.0
-margin_bottom = 799.0
-
-[node name="Control" parent="Variables/NotesPanel" index="0"]
-margin_left = -84.1134
-margin_top = -93.874
-margin_right = 591.887
-margin_bottom = 541.126
-
-[node name="Control2" parent="Variables/NotesPanel" index="1"]
-margin_left = -84.1134
-margin_top = 549.126
-margin_right = 591.887
-margin_bottom = 946.126
 
 [node name="VariableTypes" parent="." instance=ExtResource( 3 )]
 margin_left = 1664.0
@@ -107,52 +44,6 @@ margin_bottom = 720.0
 [node name="Constants" parent="." instance=ExtResource( 5 )]
 margin_left = 5120.0
 margin_right = 6400.0
-margin_bottom = 720.0
-
-[node name="BodyPanel" parent="Constants" index="0"]
-margin_right = 795.0
-margin_bottom = 720.0
-
-[node name="Column2" parent="Constants/BodyPanel" index="0"]
-margin_right = 781.0
-margin_bottom = 697.0
-
-[node name="Title" parent="Constants/BodyPanel/Column2" index="0"]
-margin_right = 756.0
-text = "4. Stałe"
-
-[node name="Column" parent="Constants/BodyPanel/Column2" index="1"]
-margin_right = 756.0
-margin_bottom = 248.0
-
-[node name="Label" parent="Constants/BodyPanel/Column2/Column" index="0"]
-margin_right = 756.0
-margin_bottom = 84.0
-
-[node name="TextEdit" parent="Constants/BodyPanel/Column2/Column" index="1"]
-margin_top = 92.0
-margin_right = 756.0
-margin_bottom = 192.0
-
-[node name="HSeparator2" parent="Constants/BodyPanel/Column2/Column" index="2"]
-margin_top = 200.0
-margin_right = 756.0
-margin_bottom = 204.0
-
-[node name="Column2" parent="Constants/BodyPanel/Column2" index="2"]
-margin_top = 256.0
-margin_right = 756.0
-margin_bottom = 419.0
-
-[node name="Label3" parent="Constants/BodyPanel/Column2/Column2" index="0"]
-margin_right = 756.0
-
-[node name="TextEdit2" parent="Constants/BodyPanel/Column2/Column2" index="1"]
-margin_right = 756.0
-
-[node name="NotesPanel" parent="Constants" index="1"]
-margin_left = 803.0
-margin_right = 1280.0
 margin_bottom = 720.0
 
 [node name="Operators" parent="." instance=ExtResource( 6 )]
@@ -203,7 +94,3 @@ margin_top = 3456.0
 margin_right = 6400.0
 margin_bottom = 4176.0
 
-
-[editable path="Variables"]
-
-[editable path="Constants"]

@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Intro to programming with GDScript"
+config/name="Platfromer 2D 01: Ruch"
 run/main_scene="res://src/Slideshow.tscn"
 config/icon="res://icon.png"
 

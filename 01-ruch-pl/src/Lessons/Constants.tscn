@@ -27,7 +27,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1145.0
 margin_bottom = 36.0
-text = "Stałe"
+text = "Stałe (Constants)"
 
 [node name="Column" type="VBoxContainer" parent="BodyPanel/Column2"]
 margin_top = 44.0
@@ -54,6 +54,10 @@ const MAXIMUM_RUN_SPEED : = 400.0"
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
+class_color = Color( 0.6, 0.6, 1, 1 )
+member_color = Color( 0.6, 1, 0.6, 1 )
+keyword_color = Color( 1, 0.6, 0.6, 1 )
+quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="HSeparator2" type="HSeparator" parent="BodyPanel/Column2/Column"]
@@ -85,6 +89,10 @@ text = "const FIGHT_MAXIMUM_DURATION : = 45 # w sekundach"
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
+class_color = Color( 0.6, 0.6, 1, 1 )
+member_color = Color( 0.6, 1, 0.6, 1 )
+keyword_color = Color( 1, 0.6, 0.6, 1 )
+quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="Column3" type="VBoxContainer" parent="BodyPanel/Column2"]
@@ -117,6 +125,10 @@ KEY_KP_ENTER # index for the Keypad enter key"
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
+class_color = Color( 0.6, 0.6, 1, 1 )
+member_color = Color( 0.6, 1, 0.6, 1 )
+keyword_color = Color( 1, 0.6, 0.6, 1 )
+quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="NotesPanel" type="Panel" parent="."]
