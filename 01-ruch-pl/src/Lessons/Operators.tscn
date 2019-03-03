@@ -40,8 +40,8 @@ text = "Operacje i operatory"
 [node name="Label" type="RichTextLabel" parent="BodyPanel/Column/Column"]
 margin_top = 44.0
 margin_right = 1145.0
-margin_bottom = 74.0
-rect_min_size = Vector2( 10, 30 )
+margin_bottom = 104.0
+rect_min_size = Vector2( 10, 60 )
 bbcode_enabled = true
 bbcode_text = "Możesz użyć symboli takich jak [b]+[/b], [b]-[/b] lub [b]*[/b] oraz znaku równości aby zmodyfikować dane
 "
@@ -51,9 +51,9 @@ text = "Możesz użyć symboli takich jak +, - lub * oraz znaku równości aby z
 [node name="TextEdit" parent="BodyPanel/Column/Column" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 82.0
+margin_top = 112.0
 margin_right = 1145.0
-margin_bottom = 147.0
+margin_bottom = 177.0
 rect_min_size = Vector2( 0, 65 )
 text = "var sześć : = 3 + 3
 var dwanaście : = sześć * 2
@@ -61,16 +61,12 @@ var dwanaście : = sześć * 2
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
-class_color = Color( 0.6, 0.6, 1, 1 )
-member_color = Color( 0.6, 1, 0.6, 1 )
-keyword_color = Color( 1, 0.6, 0.6, 1 )
-quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="Label2" type="Label" parent="BodyPanel/Column/Column"]
-margin_top = 155.0
+margin_top = 185.0
 margin_right = 1145.0
-margin_bottom = 210.0
+margin_bottom = 240.0
 size_flags_vertical = 1
 text = "Nazywamy te operatory symbolami.
 Możesz ich używać do wykonywania typowych operacji matematycznych:"
@@ -79,9 +75,9 @@ autowrap = true
 [node name="TextEdit2" parent="BodyPanel/Column/Column" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 218.0
+margin_top = 248.0
 margin_right = 1145.0
-margin_bottom = 340.0
+margin_bottom = 370.0
 rect_min_size = Vector2( 0, 122 )
 text = "var dodawanie : = 3 + 3        # 6
 var odejmowanie : = 10 - 5    # 5
@@ -90,16 +86,12 @@ var dzielenie : = 20 / 4       # 5"
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
-class_color = Color( 0.6, 0.6, 1, 1 )
-member_color = Color( 0.6, 1, 0.6, 1 )
-keyword_color = Color( 1, 0.6, 0.6, 1 )
-quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="Label4" type="RichTextLabel" parent="BodyPanel/Column/Column"]
-margin_top = 348.0
+margin_top = 378.0
 margin_right = 1145.0
-margin_bottom = 398.0
+margin_bottom = 428.0
 rect_min_size = Vector2( 10, 50 )
 bbcode_enabled = true
 bbcode_text = "Istnieje nietypowy operator w matematyce o nazwie modulo: reszta dzielnia dwóch liczb całkowitych.
@@ -110,24 +102,20 @@ Używany do tego znaku % : "
 [node name="TextEdit4" parent="BodyPanel/Column/Column" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 406.0
+margin_top = 436.0
 margin_right = 1145.0
-margin_bottom = 438.0
+margin_bottom = 468.0
 rect_min_size = Vector2( 0, 30 )
 text = "var modulo : = 20 % 3 # 2"
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
-class_color = Color( 0.6, 0.6, 1, 1 )
-member_color = Color( 0.6, 1, 0.6, 1 )
-keyword_color = Color( 1, 0.6, 0.6, 1 )
-quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="Label3" type="Label" parent="BodyPanel/Column/Column"]
-margin_top = 446.0
+margin_top = 476.0
 margin_right = 1145.0
-margin_bottom = 472.0
+margin_bottom = 502.0
 size_flags_vertical = 1
 text = "Operatory działają z różnymi wartościami:"
 autowrap = true
@@ -135,9 +123,9 @@ autowrap = true
 [node name="TextEdit3" parent="BodyPanel/Column/Column" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 480.0
+margin_top = 510.0
 margin_right = 1145.0
-margin_bottom = 572.0
+margin_bottom = 602.0
 rect_min_size = Vector2( 0, 92 )
 text = "var imię : = \"Julian\"
 var nazwisko : = \"Godotwski\"
@@ -145,10 +133,6 @@ var pełne_imie : = imię + \" \" + nazwisko"
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
-class_color = Color( 0.6, 0.6, 1, 1 )
-member_color = Color( 0.6, 1, 0.6, 1 )
-keyword_color = Color( 1, 0.6, 0.6, 1 )
-quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="NotesPanel" type="Panel" parent="."]

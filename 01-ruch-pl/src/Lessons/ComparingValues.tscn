@@ -64,10 +64,6 @@ health == 0 # fałsz"
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
-class_color = Color( 0.6, 0.6, 1, 1 )
-member_color = Color( 0.6, 1, 0.6, 1 )
-keyword_color = Color( 1, 0.6, 0.6, 1 )
-quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="Label2" type="RichTextLabel" parent="BodyPanel/Column/Column"]
@@ -92,26 +88,23 @@ health != 0 # true"
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
-class_color = Color( 0.6, 0.6, 1, 1 )
-member_color = Color( 0.6, 1, 0.6, 1 )
-keyword_color = Color( 1, 0.6, 0.6, 1 )
-quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
-[node name="Label3" type="Label" parent="BodyPanel/Column/Column"]
+[node name="Label3" type="RichTextLabel" parent="BodyPanel/Column/Column"]
 margin_top = 436.0
 margin_right = 1145.0
-margin_bottom = 462.0
-size_flags_vertical = 1
-text = "You can use the keywords and, not, and or to combine multiple comparisons"
-autowrap = true
+margin_bottom = 476.0
+rect_min_size = Vector2( 0, 40 )
+bbcode_enabled = true
+bbcode_text = "Możesz użyć słów kluczowych [b]not[/b], [b]and[/b] i [b]or[/b], aby połączyć wiele porównań"
+text = "Możesz użyć słów kluczowych not, and i or, aby połączyć wiele porównań"
 
 [node name="TextEdit3" parent="BodyPanel/Column/Column" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 470.0
+margin_top = 484.0
 margin_right = 1145.0
-margin_bottom = 600.0
+margin_bottom = 614.0
 rect_min_size = Vector2( 0, 130 )
 text = "var move_speed : = 200.0
 var animation : = \"walk\"
@@ -119,10 +112,6 @@ animation == \"walk\" and speed >= 100.0 # true"
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
-class_color = Color( 0.6, 0.6, 1, 1 )
-member_color = Color( 0.6, 1, 0.6, 1 )
-keyword_color = Color( 1, 0.6, 0.6, 1 )
-quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="NotesPanel" type="Panel" parent="."]
@@ -140,7 +129,7 @@ margin_top = 60.0
 margin_right = 447.0
 margin_bottom = 173.0
 size_flags_vertical = 1
-text = "You can imagine that booleans are like switches: they can either be on or off."
+text = "Można sobie wyobrazić, że booleans są jak przełączniki: mogą być włączone lub wyłączone."
 autowrap = true
 
 [node name="Label4" type="Label" parent="NotesPanel"]
@@ -150,7 +139,6 @@ margin_top = 290.0
 margin_right = 434.0
 margin_bottom = 403.0
 size_flags_vertical = 1
-text = "As we already use = to assign a value to a variable, we have to write == to check if two values are equal.
-"
+text = "Ponieważ już używamy =, aby przypisać wartość do zmiennej, musimy napisać ==, aby sprawdzić, czy dwie wartości są równe."
 autowrap = true
 

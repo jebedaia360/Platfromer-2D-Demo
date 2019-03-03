@@ -16,7 +16,6 @@ margin_bottom = 1080.0
 size_flags_horizontal = 3
 
 [node name="Column" type="VBoxContainer" parent="BodyPanel"]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 25.0
@@ -26,7 +25,6 @@ margin_bottom = -20.0
 size_flags_horizontal = 3
 
 [node name="Column" type="VBoxContainer" parent="BodyPanel/Column"]
-editor/display_folded = true
 margin_right = 1145.0
 margin_bottom = 1040.0
 size_flags_vertical = 3
@@ -64,10 +62,6 @@ if health < 0:
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
-class_color = Color( 0.6, 0.6, 1, 1 )
-member_color = Color( 0.6, 1, 0.6, 1 )
-keyword_color = Color( 1, 0.6, 0.6, 1 )
-quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="HSeparator2" type="HSeparator" parent="BodyPanel/Column/Column"]
@@ -101,10 +95,6 @@ elif health < 0:
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
-class_color = Color( 0.6, 0.6, 1, 1 )
-member_color = Color( 0.6, 1, 0.6, 1 )
-keyword_color = Color( 1, 0.6, 0.6, 1 )
-quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="HSeparator3" type="HSeparator" parent="BodyPanel/Column/Column"]
@@ -115,8 +105,8 @@ margin_bottom = 517.0
 [node name="Label4" type="RichTextLabel" parent="BodyPanel/Column/Column"]
 margin_top = 525.0
 margin_right = 1145.0
-margin_bottom = 555.0
-rect_min_size = Vector2( 0, 30 )
+margin_bottom = 585.0
+rect_min_size = Vector2( 0, 60 )
 bbcode_enabled = true
 bbcode_text = "Aby skożystać z [b]if[/b] lub [b]elif[/b] musisz podać instrukcję, która zwróci typu [b]bool[/b], [b]true[/b] lub [b]false[/b]:"
 text = "Aby skożystać z if lub elif musisz podać instrukcję, która zwróci typu bool, true lub false:"
@@ -124,19 +114,15 @@ text = "Aby skożystać z if lub elif musisz podać instrukcję, która zwróci 
 [node name="TextEdit3" parent="BodyPanel/Column/Column" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 563.0
+margin_top = 593.0
 margin_right = 1145.0
-margin_bottom = 643.0
+margin_bottom = 673.0
 rect_min_size = Vector2( 0, 80 )
 text = "if speed > 100.0:
 	..."
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
-class_color = Color( 0.6, 0.6, 1, 1 )
-member_color = Color( 0.6, 1, 0.6, 1 )
-keyword_color = Color( 1, 0.6, 0.6, 1 )
-quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="NotesPanel" type="Panel" parent="."]

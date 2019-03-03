@@ -61,10 +61,6 @@ if not character_name:
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
-class_color = Color( 0.6, 0.6, 1, 1 )
-member_color = Color( 0.6, 1, 0.6, 1 )
-keyword_color = Color( 1, 0.6, 0.6, 1 )
-quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="HSeparator2" type="HSeparator" parent="BodyPanel/Column/Column"]
@@ -96,10 +92,6 @@ if active_count: # false
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
-class_color = Color( 0.6, 0.6, 1, 1 )
-member_color = Color( 0.6, 1, 0.6, 1 )
-keyword_color = Color( 1, 0.6, 0.6, 1 )
-quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="HSeparator3" type="HSeparator" parent="BodyPanel/Column/Column"]
@@ -127,10 +119,6 @@ text = "if active_count > 0: # false
 highlight_current_line = true
 show_line_numbers = true
 highlight_all_occurrences = true
-class_color = Color( 0.6, 0.6, 1, 1 )
-member_color = Color( 0.6, 1, 0.6, 1 )
-keyword_color = Color( 1, 0.6, 0.6, 1 )
-quotes_color = Color( 1, 1, 0.6, 1 )
 comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="NotesPanel" type="Panel" parent="."]
