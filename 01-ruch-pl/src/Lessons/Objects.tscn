@@ -9,14 +9,10 @@
 [ext_resource path="res://src/Components/text_edit/TextEdit.tscn" type="PackedScene" id=7]
 
 [node name="Objects" type="HBoxContainer"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -960.0
-margin_top = -540.0
-margin_right = 320.0
-margin_bottom = 180.0
+margin_left = 3351.05
+margin_top = 3453.04
+margin_right = 4631.05
+margin_bottom = 4173.04
 rect_min_size = Vector2( 1280, 720 )
 theme = ExtResource( 1 )
 
@@ -45,19 +41,19 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 745.0
 margin_bottom = 36.0
-text = "Objects"
+text = "Obiekty"
 
 [node name="Label" type="Label" parent="BodyPanel/Column/Column"]
 margin_top = 44.0
 margin_right = 745.0
 margin_bottom = 389.0
 size_flags_vertical = 1
-text = "In object-oriented programming languages like GDScript, we have a tool to bundle variables and functions together in a reusable, self-contained package: objects.
+text = "W obiektowych językach programowania, takich jak GDScript, mamy narzędzie do łączenia zmiennych i funkcji w pakiet wielokrotnego użytku, samowystarczalny: obiekty.
 
-In computer programming, objects are small machines that you design to solve a small problem.
-You can design many of these machines and make them work together to solve more and more complex problems.
+W programowaniu komputerowym obiekty to małe maszyny zaprojektowane do rozwiązania niewielkiego problemu.
+Możesz zaprojektować wiele z tych maszyn i sprawić, by współpracowały ze sobą, aby rozwiązywać coraz bardziej złożone problemy.
 
-For example, a Sprite that displays on the screen is an object. A game character will generally be a collection of multiple objects: one to make it move, several Sprites, an object to play sounds..."
+Na przykład obiekt Sprite wyświetlany na ekranie jest obiektem. Postać z gry będzie generalnie zbiorem wielu obiektów: jednym, który sprawi, że się ruszy, kilkoma Sprites, obiektem do odtwarzania dźwięków ..."
 autowrap = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="BodyPanel/Column/Column"]
@@ -96,7 +92,7 @@ margin_top = 533.0
 margin_right = 745.0
 margin_bottom = 588.0
 size_flags_vertical = 1
-text = "You build objects from a class through instantiation, a process that takes a plan and produces a concrete object you can work with:"
+text = "Budujesz obiekty z klasy przez instancję, proces, który bierze plan i tworzy konkretny obiekt, z którym możesz pracować:"
 autowrap = true
 
 [node name="TextEdit" parent="BodyPanel/Column/Column" instance=ExtResource( 7 )]
@@ -123,7 +119,7 @@ margin_top = 176.0
 margin_right = 446.0
 margin_bottom = 304.0
 size_flags_vertical = 1
-text = "Contrary to what too many object-oriented programming beginner tutorial say, they are not meant to be like objects in the real-world."
+text = "W przeciwieństwie do tego, co wiele tutoriali do programowania obiektowego dla początkujących, nie są one podobne do obiektów w świecie rzeczywistym."
 autowrap = true
 
 [node name="Label4" type="Label" parent="NotesPanel"]
@@ -133,6 +129,6 @@ margin_top = 64.0
 margin_right = 446.0
 margin_bottom = 206.0
 size_flags_vertical = 1
-text = "We call an object's variables and constants its state, and its functions are the object's behavior."
+text = "Zmienne obiektu i stałe nazywamy jego stanem, a jego funkcje są zachowaniem obiektu."
 autowrap = true
 

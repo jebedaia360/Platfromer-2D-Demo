@@ -35,7 +35,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1145.0
 margin_bottom = 36.0
-text = "Porówyanie wartości"
+text = "Porównanie wartości"
 
 [node name="Label" type="RichTextLabel" parent="BodyPanel/Column/Column"]
 margin_top = 44.0

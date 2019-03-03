@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/Lessons/Slides.gd" type="Script" id=1]
 [ext_resource path="res://src/Lessons/Variables.tscn" type="PackedScene" id=2]
@@ -9,10 +9,9 @@
 [ext_resource path="res://src/Lessons/ComparingValues.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Lessons/Conditions1.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Lessons/Conditions2.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/Lessons/ListsOfValues.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/Lessons/Loops.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/Lessons/Objects.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/Lessons/Classes.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Lessons/UsingFunctions.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Lessons/Objects.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Lessons/Classes.tscn" type="PackedScene" id=12]
 
 [node name="Slides" type="Control"]
 script = ExtResource( 1 )
@@ -35,13 +34,11 @@ margin_right = 813.0
 margin_bottom = 799.0
 
 [node name="Column" parent="Variables/BodyPanel/Column" index="0"]
-editor/display_folded = true
 margin_right = 763.0
 margin_bottom = 462.0
 
 [node name="Title" parent="Variables/BodyPanel/Column/Column" index="0"]
 margin_right = 763.0
-text = "1. 1. 1. 1. 1. Zmienne (Variables)"
 
 [node name="RichTextLabel" parent="Variables/BodyPanel/Column/Column" index="1"]
 margin_right = 763.0
@@ -121,7 +118,6 @@ margin_bottom = 709.0
 
 [node name="Title" parent="Constants/BodyPanel/Column2" index="0"]
 margin_right = 765.0
-text = "4. 4. 4. 4. 4. 4. Stałe (Constants)"
 
 [node name="Column" parent="Constants/BodyPanel/Column2" index="1"]
 margin_right = 765.0
@@ -181,25 +177,12 @@ margin_top = 2304.0
 margin_right = 6400.0
 margin_bottom = 3024.0
 
-[node name="ListsOfValues" parent="." instance=ExtResource( 10 )]
-margin_left = 6912.0
-margin_top = 2304.0
-margin_right = 8192.0
-margin_bottom = 3024.0
+[node name="UsingFunctions" parent="." instance=ExtResource( 10 )]
 
-[node name="Loops" parent="." instance=ExtResource( 11 )]
-margin_left = 8704.0
-margin_top = 2304.0
-margin_right = 9984.0
-margin_bottom = 3024.0
+[node name="Objects" parent="." instance=ExtResource( 11 )]
 
-[node name="Objects" parent="." instance=ExtResource( 12 )]
-margin_left = 3328.0
-margin_top = 3456.0
-margin_right = 4608.0
-margin_bottom = 4176.0
-
-[node name="Classes" parent="." instance=ExtResource( 13 )]
+[node name="Classes" parent="." instance=ExtResource( 12 )]
+editor/display_folded = true
 margin_left = 5120.0
 margin_top = 3456.0
 margin_right = 6400.0

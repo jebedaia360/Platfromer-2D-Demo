@@ -1,4 +1,4 @@
-tool
+# tool
 extends CanvasItem
 
 
@@ -36,6 +36,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _ready() -> void:
+	
 	_reset_slides()
 	get_tree().connect("tree_changed", self, '_reset_slides')
 	# Draw connecting lines
