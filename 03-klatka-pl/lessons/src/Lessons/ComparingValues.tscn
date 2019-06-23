@@ -1,0 +1,148 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://lessons/src/theme/gdquest.theme" type="Theme" id=1]
+[ext_resource path="res://lessons/src/Components/Title.tscn" type="PackedScene" id=2]
+[ext_resource path="res://lessons/src/Components/text_edit/TextEdit.tscn" type="PackedScene" id=3]
+
+
+
+
+
+[node name="ComparingValues" type="HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 1280, 720 )
+theme = ExtResource( 1 )
+
+[node name="BodyPanel" type="Panel" parent="."]
+margin_right = 1195.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+
+[node name="Column" type="VBoxContainer" parent="BodyPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+margin_top = 20.0
+margin_right = -25.0
+margin_bottom = 4.0
+size_flags_horizontal = 3
+
+[node name="Column" type="VBoxContainer" parent="BodyPanel/Column"]
+margin_right = 1145.0
+margin_bottom = 1064.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.6
+
+[node name="Title" parent="BodyPanel/Column/Column" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1145.0
+margin_bottom = 36.0
+text = "Porównanie wartości"
+
+[node name="Label" type="RichTextLabel" parent="BodyPanel/Column/Column"]
+margin_top = 44.0
+margin_right = 1145.0
+margin_bottom = 94.0
+rect_min_size = Vector2( 0, 50 )
+bbcode_enabled = true
+bbcode_text = "Możesz także użyć operatorów do porównania wartości!
+Używając znaku równości [b]=[/b],  znaku miejszości [b]<[/b] i  [b]>[/b] większości, wykrzyknika [b]![/b]
+Porównania zawsze są wartościami binarnymi: prawda lub fałsz."
+text = "Możesz także użyć operatorów do porównania wartości!
+Używając znaku równości =,  znaku miejszości < i  > większości, wykrzyknika !
+Porównania zawsze są wartościami binarnymi: prawda lub fałsz."
+
+[node name="TextEdit" parent="BodyPanel/Column/Column" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 102.0
+margin_right = 1145.0
+margin_bottom = 232.0
+rect_min_size = Vector2( 0, 130 )
+text = "var health : = 50
+health < 0  # fałsz
+health > 0  # prawda
+health == 0 # fałsz"
+highlight_current_line = true
+show_line_numbers = true
+highlight_all_occurrences = true
+comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
+
+[node name="Label2" type="RichTextLabel" parent="BodyPanel/Column/Column"]
+margin_top = 240.0
+margin_right = 1145.0
+margin_bottom = 290.0
+rect_min_size = Vector2( 0, 50 )
+bbcode_enabled = true
+bbcode_text = "Możesz łączyć znaki, aby sprawdzić, czy dwie wartości nie są równe [b]!=[/b], Jeśli jeden jest większy lub równy drugiemu [b]>=[/b] lub mniejszy lub równy drugiemu [b]<=[/b] :"
+text = "Możesz łączyć znaki, aby sprawdzić, czy dwie wartości nie są równe !=, Jeśli jeden jest większy lub równy drugiemu >= lub mniejszy lub równy drugiemu <= :"
+
+[node name="TextEdit2" parent="BodyPanel/Column/Column" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 298.0
+margin_right = 1145.0
+margin_bottom = 428.0
+rect_min_size = Vector2( 0, 130 )
+text = "health <= 0 # false
+health >= 0 # true
+health != 0 # true"
+highlight_current_line = true
+show_line_numbers = true
+highlight_all_occurrences = true
+comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
+
+[node name="Label3" type="RichTextLabel" parent="BodyPanel/Column/Column"]
+margin_top = 436.0
+margin_right = 1145.0
+margin_bottom = 476.0
+rect_min_size = Vector2( 0, 40 )
+bbcode_enabled = true
+bbcode_text = "Możesz użyć słów kluczowych [b]not[/b], [b]and[/b] i [b]or[/b], aby połączyć wiele porównań"
+text = "Możesz użyć słów kluczowych not, and i or, aby połączyć wiele porównań"
+
+[node name="TextEdit3" parent="BodyPanel/Column/Column" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 484.0
+margin_right = 1145.0
+margin_bottom = 614.0
+rect_min_size = Vector2( 0, 130 )
+text = "var move_speed : = 200.0
+var animation : = \"walk\"
+animation == \"walk\" and speed >= 100.0 # true"
+highlight_current_line = true
+show_line_numbers = true
+highlight_all_occurrences = true
+comments_color = Color( 0.298039, 0.298039, 0.298039, 1 )
+
+[node name="NotesPanel" type="Panel" parent="."]
+margin_left = 1203.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.6
+
+[node name="Label2" type="Label" parent="NotesPanel"]
+modulate = Color( 0.584314, 0.584314, 0.584314, 1 )
+margin_left = 30.0
+margin_top = 60.0
+margin_right = 447.0
+margin_bottom = 173.0
+size_flags_vertical = 1
+text = "Można sobie wyobrazić, że booleans są jak przełączniki: mogą być włączone lub wyłączone."
+autowrap = true
+
+[node name="Label4" type="Label" parent="NotesPanel"]
+modulate = Color( 0.584314, 0.584314, 0.584314, 1 )
+margin_left = 17.0
+margin_top = 290.0
+margin_right = 434.0
+margin_bottom = 403.0
+size_flags_vertical = 1
+text = "Ponieważ już używamy =, aby przypisać wartość do zmiennej, musimy napisać ==, aby sprawdzić, czy dwie wartości są równe."
+autowrap = true
+

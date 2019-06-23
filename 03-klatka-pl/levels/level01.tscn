@@ -1,0 +1,148 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scripts/player.gd" type="Script" id=1]
+[ext_resource path="res://objects/hero/Bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/hero/hero.png" type="Texture" id=3]
+[ext_resource path="res://objects/cage/cage.gd" type="Script" id=4]
+[ext_resource path="res://objects/bonus/liht/liht.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/cage/cage.png" type="Texture" id=6]
+[ext_resource path="res://objects/bonus/liht/body.png" type="Texture" id=7]
+[ext_resource path="res://objects/cage/chain01.png" type="Texture" id=8]
+[ext_resource path="res://objects/cage/chain00.png" type="Texture" id=9]
+[ext_resource path="res://objects/bonus/jump_bonus.gd" type="Script" id=10]
+[ext_resource path="res://ubuntu-font-family/Ubuntu-M.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://levels/score.gd" type="Script" id=12]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.5
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 32.0
+height = 88.5206
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 369.968
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 32.0
+
+[sub_resource type="DynamicFont" id=5]
+size = 22
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 11 )
+
+[node name="Level01" type="Node2D"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+editor/display_folded = true
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+color = Color( 0.631373, 0.109804, 0.109804, 1 )
+polygon = PoolVector2Array( 0, 384, 288, 384, 288, 544, 448, 544, 448, 480, 544, 480, 544, 416, 672, 416, 672, 352, 864, 352, 864, 224, 992, 224, 992, 608, 0, 608, 0, 384 )
+
+[node name="ColPoly" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 0, 384, 288, 384, 288, 544, 448, 544, 448, 480, 544, 480, 544, 416, 672, 416, 672, 352, 864, 352, 864, 224, 992, 224, 992, 608, 0, 608, 0, 384 )
+
+[node name="Player" type="RigidBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 128, 273.9 )
+mode = 2
+physics_material_override = SubResource( 1 )
+gravity_scale = 8.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+speed = 500
+jump_high = 500
+bullet_scene = ExtResource( 2 )
+bullet_speed = 500
+
+[node name="Sprite" type="Sprite" parent="Player"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 1, 6 )
+shape = SubResource( 2 )
+
+[node name="RayCast2D" type="RayCast2D" parent="Player"]
+modulate = Color( 0.337255, 0, 1, 1 )
+enabled = true
+cast_to = Vector2( 0, 100 )
+
+[node name="Cage" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 691.07, 125.154 )
+scale = Vector2( 0.1, 0.1 )
+script = ExtResource( 4 )
+liht_scene = ExtResource( 5 )
+
+[node name="cage" type="Sprite" parent="Cage"]
+editor/display_folded = true
+self_modulate = Color( 0.541176, 0.541176, 0.541176, 1 )
+position = Vector2( 638.619, 215.848 )
+texture = ExtResource( 6 )
+
+[node name="body2" type="Sprite" parent="Cage/cage"]
+self_modulate = Color( 0.870588, 0.968627, 0.0117647, 1 )
+position = Vector2( -27.6262, 6.80469 )
+scale = Vector2( 0.406957, 0.393863 )
+texture = ExtResource( 7 )
+
+[node name="cage2" type="Sprite" parent="Cage/cage"]
+position = Vector2( -50, 0 )
+texture = ExtResource( 6 )
+
+[node name="Area2D" type="Area2D" parent="Cage/cage"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cage/cage/Area2D"]
+position = Vector2( -31.8091, 18.1766 )
+shape = SubResource( 3 )
+
+[node name="chain01" type="Sprite" parent="Cage"]
+position = Vector2( 587.269, -336.647 )
+texture = ExtResource( 8 )
+
+[node name="chain00" type="Sprite" parent="Cage"]
+position = Vector2( 584.09, -149.956 )
+texture = ExtResource( 9 )
+
+[node name="Liht" parent="." instance=ExtResource( 5 )]
+
+[node name="JumpBonus" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 334.173, 223.664 )
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JumpBonus"]
+shape = SubResource( 4 )
+
+[node name="body" type="Sprite" parent="JumpBonus"]
+self_modulate = Color( 0, 0.647059, 1, 1 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 7 )
+
+[node name="Timer" type="Timer" parent="JumpBonus"]
+wait_time = 5.0
+one_shot = true
+
+[node name="Score" type="Label" parent="." groups=[
+"ui",
+]]
+margin_left = 900.772
+margin_top = 6.46178
+margin_right = 1022.77
+margin_bottom = 32.4618
+custom_fonts/font = SubResource( 5 )
+text = "Lihts: 00/00"
+script = ExtResource( 12 )
+
+[connection signal="body_entered" from="Cage/cage/Area2D" to="Cage" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="JumpBonus" to="JumpBonus" method="_on_JumpBonus_body_entered"]
+[connection signal="timeout" from="JumpBonus/Timer" to="JumpBonus" method="_on_Timer_timeout"]
