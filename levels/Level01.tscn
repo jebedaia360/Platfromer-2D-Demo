@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://ubuntu-font-family/Ubuntu-M.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://levels/Score.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=3]
+[ext_resource path="res://objects/bullet/Bullet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sprites/hero/hero.png" type="Texture" id=5]
+[ext_resource path="res://objects/liht/Liht.tscn" type="PackedScene" id=6]
+[ext_resource path="res://objects/JumpBonus.tscn" type="PackedScene" id=7]
+[ext_resource path="res://objects/cage/Cage.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 32.0
+height = 88.5206
+
+[node name="Level01" type="Node2D"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Poly2" type="Polygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 0, 384, 0, 0, 64, 0, 64, 384, 288, 384, 288, 544, 448, 544, 448, 480, 544, 480, 544, 416, 672, 416, 672, 352, 864, 352, 864, 224, 960, 224, 960, 0, 1024, 0, 1024, 224, 1024, 608, 0, 608, 0, 384 )
+
+[node name="ColPoly" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 0, 384, 0, 0, 64, 0, 64, 384, 288, 384, 288, 544, 448, 544, 448, 480, 544, 480, 544, 416, 672, 416, 672, 352, 864, 352, 864, 224, 960, 224, 960, 0, 1024, 0, 1024, 224, 1024, 608, 0, 608, 0, 384 )
+
+[node name="Score" type="Label" parent="."]
+margin_left = 900.772
+margin_top = 6.46178
+margin_right = 1022.77
+margin_bottom = 32.4618
+custom_fonts/font = SubResource( 1 )
+text = "Lihts: 00/00"
+script = ExtResource( 2 )
+
+[node name="Player" type="RigidBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 128, 273.9 )
+mode = 2
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+jump_high = 200
+bullet_scene = ExtResource( 4 )
+bullet_speed = 200
+
+[node name="Sprite" type="Sprite" parent="Player"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 1, 6 )
+shape = SubResource( 2 )
+
+[node name="RayCast2D" type="RayCast2D" parent="Player"]
+modulate = Color( 0.337255, 0, 1, 1 )
+enabled = true
+cast_to = Vector2( 0, 100 )
+
+[node name="Liht" parent="." instance=ExtResource( 6 )]
+position = Vector2( 459.328, 273.998 )
+
+[node name="Liht2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 292.002, 235.908 )
+
+[node name="JumpBonus" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="Cage" parent="." instance=ExtResource( 8 )]
+position = Vector2( 752.826, 54.9584 )
