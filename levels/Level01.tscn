@@ -1,36 +1,87 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://ubuntu-font-family/Ubuntu-M.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://levels/Score.gd" type="Script" id=2]
-[ext_resource path="res://scripts/Player.gd" type="Script" id=3]
-[ext_resource path="res://objects/bullet/Bullet.tscn" type="PackedScene" id=4]
-[ext_resource path="res://sprites/hero/hero.png" type="Texture" id=5]
-[ext_resource path="res://objects/liht/Liht.tscn" type="PackedScene" id=6]
-[ext_resource path="res://objects/JumpBonus.tscn" type="PackedScene" id=7]
-[ext_resource path="res://objects/cage/Cage.tscn" type="PackedScene" id=8]
+[ext_resource path="res://levels/Lever.gd" type="Script" id=1]
+[ext_resource path="res://placeholders/switchLeft.png" type="Texture" id=2]
+[ext_resource path="res://placeholders/bridge.png" type="Texture" id=3]
+[ext_resource path="res://ubuntu-font-family/Ubuntu-M.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://levels/Score.gd" type="Script" id=5]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=6]
+[ext_resource path="res://objects/bullet/Bullet.tscn" type="PackedScene" id=7]
+[ext_resource path="res://sprites/hero/hero_new_pixel_render.png" type="Texture" id=8]
+[ext_resource path="res://objects/liht/Liht.tscn" type="PackedScene" id=9]
+[ext_resource path="res://objects/JumpBonus.tscn" type="PackedScene" id=10]
+[ext_resource path="res://objects/cage/Cage.tscn" type="PackedScene" id=11]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 31.6544, 31.7738 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 9.95813, 132.658 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 22
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 1 )
+font_data = ExtResource( 4 )
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 32.0
-height = 88.5206
+height = 63.7997
 
 [node name="Level01" type="Node2D"]
 __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Lever" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 960, 192 )
+script = ExtResource( 1 )
+move_door = Vector2( 0, -400 )
+door_path = NodePath("../Door")
+
+[node name="switchLeft" type="Sprite" parent="Lever"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lever"]
+shape = SubResource( 3 )
+
+[node name="Tween" type="Tween" parent="Lever"]
+
+[node name="Door" type="KinematicBody2D" parent="."]
+position = Vector2( 1113.11, 119.644 )
+
+[node name="bridge" type="Sprite" parent="Door"]
+rotation = 1.5708
+texture = ExtResource( 3 )
+
+[node name="bridge2" type="Sprite" parent="Door"]
+position = Vector2( 0, 70.5 )
+rotation = 1.5708
+texture = ExtResource( 3 )
+
+[node name="bridge3" type="Sprite" parent="Door"]
+position = Vector2( 0, -64 )
+rotation = 1.5708
+texture = ExtResource( 3 )
+
+[node name="bridge4" type="Sprite" parent="Door"]
+position = Vector2( 0, -128 )
+rotation = 1.5708
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2( -24.9753, -30.7922 )
+shape = SubResource( 4 )
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+editor/display_folded = true
 
 [node name="Poly2" type="Polygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( 0, 384, 0, 0, 64, 0, 64, 384, 288, 384, 288, 544, 448, 544, 448, 480, 544, 480, 544, 416, 672, 416, 672, 352, 864, 352, 864, 224, 960, 224, 960, 0, 1024, 0, 1024, 224, 1024, 608, 0, 608, 0, 384 )
+polygon = PoolVector2Array( 0, 384, 0, 0, 64, 0, 64, 384, 288, 384, 288, 544, 448, 544, 448, 480, 544, 480, 544, 416, 672, 416, 672, 352, 864, 352, 864, 224, 960, 224, 1024, 224, 1120, 224, 1120, 544, 1536, 544, 1536, 480, 1632, 480, 1632, 224, 1696, 224, 1696, 608, 1024, 608, 0, 608, 0, 384 )
 
 [node name="ColPoly" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( 0, 384, 0, 0, 64, 0, 64, 384, 288, 384, 288, 544, 448, 544, 448, 480, 544, 480, 544, 416, 672, 416, 672, 352, 864, 352, 864, 224, 960, 224, 960, 0, 1024, 0, 1024, 224, 1024, 608, 0, 608, 0, 384 )
+polygon = PoolVector2Array( 0, 384, 0, 0, 64, 0, 64, 384, 288, 384, 288, 544, 448, 544, 448, 480, 544, 480, 544, 416, 672, 416, 672, 352, 864, 352, 864, 224, 960, 224, 1120, 224, 1120, 544, 1536, 544, 1536, 480, 1632, 480, 1632, 224, 1696, 224, 1696, 608, 1024, 608, 0, 608, 0, 384 )
 
 [node name="Score" type="Label" parent="."]
 margin_left = 900.772
@@ -39,26 +90,27 @@ margin_right = 1022.77
 margin_bottom = 32.4618
 custom_fonts/font = SubResource( 1 )
 text = "Lihts: 00/00"
-script = ExtResource( 2 )
+script = ExtResource( 5 )
 
 [node name="Player" type="RigidBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 128, 273.9 )
+position = Vector2( 129, 275.9 )
 mode = 2
-script = ExtResource( 3 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
 }
 jump_high = 200
-bullet_scene = ExtResource( 4 )
+bullet_scene = ExtResource( 7 )
 bullet_speed = 200
 
 [node name="Sprite" type="Sprite" parent="Player"]
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 5 )
+position = Vector2( 21, 3 )
+scale = Vector2( 0.589063, 0.628125 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2( 1, 6 )
+position = Vector2( 0, 15 )
 shape = SubResource( 2 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Player"]
@@ -66,14 +118,17 @@ modulate = Color( 0.337255, 0, 1, 1 )
 enabled = true
 cast_to = Vector2( 0, 100 )
 
-[node name="Liht" parent="." instance=ExtResource( 6 )]
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+
+[node name="Liht" parent="." instance=ExtResource( 9 )]
 position = Vector2( 459.328, 273.998 )
 
-[node name="Liht2" parent="." instance=ExtResource( 6 )]
+[node name="Liht2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 292.002, 235.908 )
 
-[node name="JumpBonus" parent="." instance=ExtResource( 7 )]
+[node name="JumpBonus" parent="." instance=ExtResource( 10 )]
 visible = false
 
-[node name="Cage" parent="." instance=ExtResource( 8 )]
+[node name="Cage" parent="." instance=ExtResource( 11 )]
 position = Vector2( 752.826, 54.9584 )
