@@ -1,15 +1,16 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://ubuntu-font-family/Ubuntu-M.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://levels/Score.gd" type="Script" id=2]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=3]
 [ext_resource path="res://objects/bullet/Bullet.tscn" type="PackedScene" id=4]
-[ext_resource path="res://sprites/hero/hero_new_pixel_render.png" type="Texture" id=5]
+[ext_resource path="res://sprites/hero/hero_newV2.png" type="Texture" id=5]
 [ext_resource path="res://objects/liht/Liht.tscn" type="PackedScene" id=6]
 [ext_resource path="res://objects/JumpBonus.tscn" type="PackedScene" id=7]
 [ext_resource path="res://objects/cage/Cage.tscn" type="PackedScene" id=8]
 [ext_resource path="res://objects/switch/Switch.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sprites/cage/chain00.png" type="Texture" id=10]
+[ext_resource path="res://levels/MovePlatfrom.gd" type="Script" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 22
@@ -19,10 +20,18 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 32.0
-height = 47.6559
+height = 61.1776
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 44.0399, 138.252 )
+
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1920, 128, 0, 0, 0, 0, 2560, 128 )
+}
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 72, 24 )
 
 [node name="Level01" type="Node2D"]
 __meta__ = {
@@ -47,24 +56,24 @@ text = "Lihts: 00/00"
 script = ExtResource( 2 )
 
 [node name="Player" type="RigidBody2D" parent="."]
-position = Vector2( 155.558, 274.44 )
+position = Vector2( 1480, 97.825 )
 mode = 2
+mass = 1.5
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
-speed = 170
-jump_high = 170
+jump_high = 200
 bullet_scene = ExtResource( 4 )
-bullet_speed = 200
+bullet_speed = 300
 
 [node name="Sprite" type="Sprite" parent="Player"]
-position = Vector2( 21.6144, 7.83525 )
-scale = Vector2( 0.607126, 0.573877 )
+position = Vector2( 2.27515, 9.5415 )
+scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2( 0.459641, 21.6704 )
+position = Vector2( 1.02844, 13.1384 )
 shape = SubResource( 2 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Player"]
@@ -110,3 +119,27 @@ shape = SubResource( 3 )
 self_modulate = Color( 0.984314, 0.00392157, 0.00392157, 1 )
 z_index = 1
 texture = ExtResource( 10 )
+
+[node name="MovePlatfrom" type="Path2D" parent="."]
+curve = SubResource( 4 )
+script = ExtResource( 11 )
+time = 5
+
+[node name="PathFollow2D" type="PathFollow2D" parent="MovePlatfrom"]
+position = Vector2( 1920, 128 )
+
+[node name="KB2D" type="KinematicBody2D" parent="MovePlatfrom/PathFollow2D" groups=[
+"movep",
+]]
+
+[node name="Sprite" type="Sprite" parent="MovePlatfrom/PathFollow2D/KB2D"]
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovePlatfrom/PathFollow2D/KB2D"]
+shape = SubResource( 5 )
+
+[node name="Tween" type="Tween" parent="MovePlatfrom"]
+playback_process_mode = 0
+[connection signal="tween_all_completed" from="MovePlatfrom/Tween" to="MovePlatfrom" method="_on_tween_all_completed"]

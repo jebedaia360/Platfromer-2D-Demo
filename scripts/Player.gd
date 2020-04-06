@@ -13,7 +13,13 @@ func _ready():
 	normal_scale = $Sprite.scale
 	
 func _physics_process(delta: float) -> void:
+	linear_velocity.x = lerp(linear_velocity.x, 0, delta)
 	
+	if $RayCast2D.is_colliding():
+		var kb : = $RayCast2D.get_collider() as KinematicBody2D
+		if kb and kb.is_in_group("movep"):
+			global_position.x = kb.global_position.x
+			
 	if Input.is_action_pressed("ui_right"):
 		dright = true
 		linear_velocity.x += speed * delta
