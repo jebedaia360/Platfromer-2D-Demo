@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://lab/toon-pallet.shader" type="Shader" id=1]
+[ext_resource path="res://lab/LightTest.tscn" type="PackedScene" id=2]
+[ext_resource path="res://lab/endesga-256.png" type="Texture" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/nColors = 32.0
+shader_param/pallet = ExtResource( 3 )
+
+[node name="LightShaderTest" type="Node2D"]
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+material = SubResource( 1 )
+margin_right = 1024.0
+margin_bottom = 598.0
+stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 598 )
+own_world = true
+handle_input_locally = false
+usage = 0
+render_target_update_mode = 3
+
+[node name="LightTest" parent="ViewportContainer/Viewport" instance=ExtResource( 2 )]

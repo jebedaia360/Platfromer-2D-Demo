@@ -2,6 +2,5 @@
 *.zip
 *.vscode
 .mono
-lab/
 mono_crash*
 hero/sprites/AnimRef.png
