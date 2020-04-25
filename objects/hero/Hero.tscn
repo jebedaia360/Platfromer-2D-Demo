@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://objects/hero/hero.gd" type="Script" id=1]
+[ext_resource path="res://objects/hero/normal.png" type="Texture" id=2]
+[ext_resource path="res://objects/bullet/Bullet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/hero/color.png" type="Texture" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 32.0
+height = 61.1776
+
+[node name="Hero" type="RigidBody2D"]
+position = Vector2( 1480, 97.825 )
+mode = 2
+mass = 1.5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+jump_high = 200
+bullet_scene = ExtResource( 3 )
+bullet_speed = 300
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2.27515, 9.5415 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+normal_map = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.02844, 13.1384 )
+shape = SubResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+modulate = Color( 0.337255, 0, 1, 1 )
+enabled = true
+cast_to = Vector2( 0, 100 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = 0

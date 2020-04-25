@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://lab/toon-pallet.shader" type="Shader" id=1]
-[ext_resource path="res://lab/LightTest.tscn" type="PackedScene" id=2]
-[ext_resource path="res://lab/endesga-256.png" type="Texture" id=3]
+[ext_resource path="res://shader/toon-pallet.shader" type="Shader" id=1]
+[ext_resource path="res://shader/LightTest.tscn" type="PackedScene" id=2]
+[ext_resource path="res://shader/endesga-256.png" type="Texture" id=3]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 1 )
@@ -21,7 +21,7 @@ __meta__ = {
 }
 
 [node name="Viewport" type="Viewport" parent="ViewportContainer"]
-size = Vector2( 1024, 598 )
+size = Vector2( 1024, 600 )
 own_world = true
 handle_input_locally = false
 usage = 0

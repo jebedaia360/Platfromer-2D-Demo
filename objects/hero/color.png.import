@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/switchLeft.png-3c2e988c7a57e57a0a475357e5094b93.stex"
+path="res://.import/color.png-92548d825eff8f9df98c65f5a0393840.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://placeholders/switchLeft.png"
-dest_files=[ "res://.import/switchLeft.png-3c2e988c7a57e57a0a475357e5094b93.stex" ]
+source_file="res://objects/hero/color.png"
+dest_files=[ "res://.import/color.png-92548d825eff8f9df98c65f5a0393840.stex" ]
 
 [params]
 
@@ -21,8 +21,8 @@ compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
-flags/mipmaps=false
-flags/anisotropic=false
+flags/mipmaps=true
+flags/anisotropic=true
 flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false

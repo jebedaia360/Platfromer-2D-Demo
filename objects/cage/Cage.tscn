@@ -5,13 +5,7 @@
 [ext_resource path="res://sprites/cage/chain00.png" type="Texture" id=3]
 [ext_resource path="res://sprites/cage/chain01.png" type="Texture" id=4]
 [ext_resource path="res://sprites/cage/cage.png" type="Texture" id=5]
-[ext_resource path="res://sprites/liht/body.png" type="Texture" id=6]
-
-
-
-
-
-
+[ext_resource path="res://objects/liht/body.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 69.5086
@@ -38,23 +32,17 @@ z_index = 1
 texture = ExtResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( -0.826828, 168.072 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 1, 4 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
-editor/display_folded = true
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 5 )
 
-[node name="body" type="Sprite" parent="Area2D/Sprite"]
-modulate = Color( 0.870588, 0.968627, 0.0117647, 1 )
-position = Vector2( 4.3678, 0.0315437 )
-scale = Vector2( 0.281931, 0.346299 )
-z_index = -1
-texture = ExtResource( 6 )
+[node name="body2" parent="Area2D/Sprite" instance=ExtResource( 6 )]
+scale = Vector2( 0.424379, -0.438378 )
+z_index = -6
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
