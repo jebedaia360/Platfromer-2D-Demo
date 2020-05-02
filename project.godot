@@ -86,4 +86,8 @@ use={
 
 [rendering]
 
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
+quality/filters/use_nearest_mipmap_filter=true
+quality/voxel_cone_tracing/high_quality=true
 environment/default_environment="res://default_env.tres"

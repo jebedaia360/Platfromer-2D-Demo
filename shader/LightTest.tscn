@@ -1,19 +1,18 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://objects/hero/color.png" type="Texture" id=1]
 [ext_resource path="res://objects/hero/normal.png" type="Texture" id=2]
 [ext_resource path="res://shader/AnimationPlayer.gd" type="Script" id=3]
 [ext_resource path="res://shader/light.png" type="Texture" id=4]
+[ext_resource path="res://shader/256.png" type="Texture" id=5]
+[ext_resource path="res://objects/hero/render.png" type="Texture" id=6]
 
-[sub_resource type="OccluderPolygon2D" id=1]
-polygon = PoolVector2Array( -67.9116, 114.092, 85.3096, 105.5, 36.6225, -30.5374, -42.136, -9.05779 )
-
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "lights"
 length = 4.0
 loop = true
 tracks/0/type = "bezier"
-tracks/0/path = NodePath("Light2D2:position:x")
+tracks/0/path = NodePath("Light2D:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -22,53 +21,49 @@ tracks/0/keys = {
 "points": PoolRealArray( 731.486, -0.25, 0, 0.25, 0, 152, -0.25, 0, 0.25, 0, 731.486, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 2, 4 )
 }
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Light2D:position:x")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 816, -0.25, 0, 0.25, 0, 166.399, -0.25, 0, 0.25, 0, 816, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 2, 4 )
-}
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( 1011.42, -10.233, 1040.23, 640.658, -55.4079, 618.946, -67.0992, -42.4467 )
 
 [node name="LightTest" type="Node2D"]
 position = Vector2( 0, 8.79041 )
 
 [node name="colors_test" type="Sprite" parent="."]
-position = Vector2( 552, 279.21 )
+position = Vector2( 849.755, 294.989 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 normal_map = ExtResource( 2 )
 
+[node name="render_test" type="Sprite" parent="."]
+position = Vector2( 226.096, 304.242 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+normal_map = ExtResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 119.599, -265.565 )
+color = Color( 0.764706, 0.764706, 0.764706, 1 )
+texture = ExtResource( 5 )
+polygon = PoolVector2Array( 596.1, 312.17, 584.74, 430.318, 816.492, 418.957, 816.492, 278.089 )
+
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 816, 351.21 )
+position = Vector2( 731.486, 267.694 )
 z_index = 6
 texture = ExtResource( 4 )
 texture_scale = 0.4
-energy = 1.87
 range_height = 2048.0
 shadow_enabled = true
 shadow_color = Color( 0, 0, 0, 1 )
-shadow_filter_smooth = 23.3
-
-[node name="Light2D2" type="Light2D" parent="."]
-position = Vector2( 731.486, 351.21 )
-z_index = 6
-texture = ExtResource( 4 )
-texture_scale = 0.25
-energy = 1.87
-range_height = 2048.0
-shadow_enabled = true
-shadow_color = Color( 0, 0, 0, 1 )
-shadow_filter_smooth = 23.3
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-position = Vector2( 192, 239.21 )
-occluder = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 0.5
-anims/lights = SubResource( 2 )
+anims/lights = SubResource( 1 )
 script = ExtResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2( 20.4163, -0.95497 )
+occluder = SubResource( 2 )

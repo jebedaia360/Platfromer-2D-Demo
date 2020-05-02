@@ -2,11 +2,10 @@
 
 [ext_resource path="res://levels/Level01.tscn" type="PackedScene" id=1]
 [ext_resource path="res://shader/toon-pallet.shader" type="Shader" id=2]
-[ext_resource path="res://shader/endesga-256.png" type="Texture" id=3]
+[ext_resource path="res://shader/endesga-256-16x-edit3.png" type="Texture" id=3]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )
-shader_param/nColors = 256.0
 shader_param/pallet = ExtResource( 3 )
 
 [node name="ViewPort" type="ViewportContainer"]
