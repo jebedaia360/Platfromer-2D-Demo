@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/liht.svg-f847ab3a33aa178716e92cb69b3cdc61.stex"
+path="res://.import/wing.png-04adafa159c7043b4ab4fa807730e625.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/liht/liht.svg"
-dest_files=[ "res://.import/liht.svg-f847ab3a33aa178716e92cb69b3cdc61.stex" ]
+source_file="res://objects/liht/wing.png"
+dest_files=[ "res://.import/wing.png-04adafa159c7043b4ab4fa807730e625.stex" ]
 
 [params]
 

@@ -7,8 +7,9 @@ onready var _thing_to_move : Node2D = get_node(thing_to_move)
 onready var _move_to_node : Node2D = get_node(move_to_node)
 
 
-func _on_Area2D_body_entered(body):
-	if body.is_in_group("bullets"):
+func _on_Area2D_area_entered(area):
+	if area.is_in_group("bullets"):
+		area.queue_free()
 		var start_pos = _thing_to_move.position 
 		var end_pos = _move_to_node.position
 		$Tween.interpolate_property(
@@ -18,3 +19,4 @@ func _on_Area2D_body_entered(body):
 		)
 		$Tween.start()
 		pass
+

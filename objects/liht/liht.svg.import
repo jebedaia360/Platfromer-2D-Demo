@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cage.png-db5a03f3da13dafba9d6e584ba016013.stex"
+path="res://.import/liht.svg-e451975e60656a19f5ca01484a01ac57.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/cage/cage.png"
-dest_files=[ "res://.import/cage.png-db5a03f3da13dafba9d6e584ba016013.stex" ]
+source_file="res://objects/liht/liht.svg"
+dest_files=[ "res://.import/liht.svg-e451975e60656a19f5ca01484a01ac57.stex" ]
 
 [params]
 

@@ -1,21 +1,31 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://objects/bullet/Bullet.gd" type="Script" id=1]
-[ext_resource path="res://sprites/liht/body.png" type="Texture" id=2]
+[ext_resource path="res://objects/bullet/bullet.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 32.0
+radius = 27.965
 
-[node name="Bullet" type="RigidBody2D" groups=[
+[node name="Bullet" type="Area2D" groups=[
 "bullets",
 ]]
-mass = 0.01
 script = ExtResource( 1 )
+speed = 200
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.52447, 0.15778 )
 shape = SubResource( 1 )
 
 [node name="body" type="Sprite" parent="."]
+modulate = Color( 0.0705882, 0.305882, 0.537255, 1 )
 self_modulate = Color( 1, 1, 1, 0.698039 )
-scale = Vector2( 0.05, 0.05 )
+position = Vector2( 6.31117, 0.473337 )
+scale = Vector2( 0.0836264, 0.0808068 )
 texture = ExtResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+self_modulate = Color( 1, 1, 1, 0.698039 )
+position = Vector2( 6.31117, 0.473337 )
+scale = Vector2( 0.0836264, 0.0808068 )
+texture = ExtResource( 2 )
+color = Color( 0.0705882, 0.305882, 0.537255, 1 )

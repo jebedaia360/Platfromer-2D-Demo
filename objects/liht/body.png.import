@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hero_new_pixel_render.png-7b42c1f96c560c9877bc960b184c1d0f.stex"
+path="res://.import/body.png-259d09d04063fa5878465ba499d2e9e4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/hero/hero_new_pixel_render.png"
-dest_files=[ "res://.import/hero_new_pixel_render.png-7b42c1f96c560c9877bc960b184c1d0f.stex" ]
+source_file="res://objects/liht/body.png"
+dest_files=[ "res://.import/body.png-259d09d04063fa5878465ba499d2e9e4.stex" ]
 
 [params]
 

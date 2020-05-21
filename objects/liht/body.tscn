@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://sprites/liht/body.png" type="Texture" id=1]
+[ext_resource path="res://objects/liht/body.png" type="Texture" id=1]
 [ext_resource path="res://shader/light.png" type="Texture" id=2]
+
 
 [node name="body" type="Sprite"]
 self_modulate = Color( 0.780392, 0.243137, 0.00784314, 1 )

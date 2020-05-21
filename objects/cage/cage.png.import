@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hero_new_render.png-065325fe84ed02976d94e729cd47090e.stex"
+path="res://.import/cage.png-4a9d9692b733cb78bc88d49649ee2a80.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/hero/hero_new_render.png"
-dest_files=[ "res://.import/hero_new_render.png-065325fe84ed02976d94e729cd47090e.stex" ]
+source_file="res://objects/cage/cage.png"
+dest_files=[ "res://.import/cage.png-4a9d9692b733cb78bc88d49649ee2a80.stex" ]
 
 [params]
 

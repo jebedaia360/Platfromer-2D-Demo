@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://objects/hero/hero.gd" type="Script" id=1]
 [ext_resource path="res://objects/hero/normal.png" type="Texture" id=2]
@@ -10,9 +10,6 @@
 radius = 32.0
 height = 61.1776
 
-[sub_resource type="OccluderPolygon2D" id=2]
-polygon = PoolVector2Array( -512, -320, -512, 304, 512, 304, 512, -320 )
-
 [node name="Hero" type="RigidBody2D"]
 mode = 2
 mass = 1.5
@@ -22,7 +19,6 @@ __meta__ = {
 }
 jump_high = 200
 bullet_scene = ExtResource( 3 )
-bullet_speed = 300
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 2.27515, 9.5415 )
@@ -49,6 +45,3 @@ cast_to = Vector2( 0, 100 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 limit_left = 0
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Camera2D"]
-occluder = SubResource( 2 )

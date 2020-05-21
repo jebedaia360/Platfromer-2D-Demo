@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hero.png-a758cfbbc02f07e270cc1a83ba6fc2a7.stex"
+path="res://.import/chain01.png-af717d15275ce3dcc640a4f468c66a4a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/hero/hero.png"
-dest_files=[ "res://.import/hero.png-a758cfbbc02f07e270cc1a83ba6fc2a7.stex" ]
+source_file="res://objects/cage/chain01.png"
+dest_files=[ "res://.import/chain01.png-af717d15275ce3dcc640a4f468c66a4a.stex" ]
 
 [params]
 
